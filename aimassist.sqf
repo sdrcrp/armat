@@ -13,6 +13,7 @@ player addEventHandler ["Fired", {
       _bullet = _this select 6;
       _head = _target modelToWorld (_target selectionPosition "neck");
       _bullet setPos _head;
+    };
   };
 }];
 addMissionEventHandler ["Draw3D", {
