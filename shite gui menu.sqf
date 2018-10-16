@@ -1,146 +1,146 @@
 ArmaTeam = {
-_ArmaTeam1 = {findDisplay 24};
+_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1 = {findDisplay 24};
 createDialog "RscDisplayChat";
 
-	_ArmaTeam15 = (call _ArmaTeam1) ctrlCreate ["IGUIBack", 87676];
-	_ArmaTeam15 ctrlCommit 0;
-	_ArmaTeam15 ctrlSetPosition [-0.675,-0.36,0.8125,1.72];
-	_ArmaTeam15 ctrlCommit 0.5;
-	_ArmaTeam15 ctrlSetBackgroundColor [0.212,0.22,0.231,1];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg15 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["IGUIBack", 87676];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg15 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg15 ctrlSetPosition [-0.675,-0.36,0.8125,1.72];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg15 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg15 ctrlSetBackgroundColor [0.212,0.22,0.231,1];
 
-	_ArmaTeam2 = (call _ArmaTeam1) ctrlCreate ["RscIGUIListBox", 87676];
-	_ArmaTeam2 ctrlCommit 0;
-	_ArmaTeam2 ctrlSetPosition [-0.1625,0.16,0.2875,0.62];
-	_ArmaTeam2 ctrlCommit 0.5;
-	_ArmaTeam2 ctrlAddEventHandler["LBDblClick", "[_ArmaTeam2 lbText (lbCurSel _ArmaTeam2),(lbCurSel _ArmaTeam2)] call _ArmaTeam12;"];
-	_ArmaTeam2 ctrlSetBackgroundColor [0.463,0.757,0.6,1];
-	_ArmaTeam2 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscIGUIListBox", 87676];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 ctrlSetPosition [-0.1625,0.16,0.2875,0.62];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 ctrlAddEventHandler["LBDblClick", "[_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 lbText (lbCurSel _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2),(lbCurSel _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2)] call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg12;"];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 ctrlSetBackgroundColor [0.463,0.757,0.6,1];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 ctrlSetFont "RobotoCondensedBold";
 	{
-		_ArmaTeam2 lbAdd(name _x);
+		_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg2 lbAdd(name _x);
 	} foreach allPlayers;
 
-	_ArmaTeam12 = {
-		_ArmaTeam11 = this select 0;
-		systemChat format["<AT> Selected %1!", _ArmaTeam11];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg12 = {
+		_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11 = this select 0;
+		systemChat format["<AT> Selected %1!", _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11];
 	};
 
-	_ArmaTeam13 = (call _ArmaTeam1) ctrlCreate ["RscStructuredText", 46657];
-	_ArmaTeam13 ctrlCommit 0;
-	_ArmaTeam13 ctrlSetPosition [-0.67,-0.352,0.802525,0.101684];
-	_ArmaTeam13 ctrlCommit 0.5;
-	_ArmaTeam13 ctrlSetStructuredText parseText
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg13 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscStructuredText", 46657];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg13 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg13 ctrlSetPosition [-0.67,-0.352,0.802525,0.101684];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg13 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg13 ctrlSetStructuredText parseText
 		"<t size='0.5'>&#160;</t><br/><t colorLink='#ffffff'><a href='http://arma.team'><t size='2' align='center'>Arma.Team GUI Menu&#160;&#160;</a></t>";
-	_ArmaTeam13 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg13 ctrlSetFont "RobotoCondensedBold";
 
-	_ArmaTeam3 = (call _ArmaTeam1) ctrlCreate ["RscMapControl", 6178];
-	_ArmaTeam3 ctrlCommit 0;
-	_ArmaTeam3 ctrlSetPosition [-0.1625,0.8,0.2875,0.543368];	
-	_ArmaTeam3 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg3 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscMapControl", 6178];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg3 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg3 ctrlSetPosition [-0.1625,0.8,0.2875,0.543368];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg3 ctrlCommit 0.5;
 
-	_ArmaTeam4 = (call _ArmaTeam1) ctrlCreate ["RscButton", 46657];
-	_ArmaTeam4 ctrlCommit 0;
-	_ArmaTeam4 ctrlSetPosition [-0.1625,0.0993939,0.0875,0.04];
-	_ArmaTeam4 ctrlCommit 0.5;
-	_ArmaTeam4 ctrlSetText "Execute";
-	_ArmaTeam4 ctrlSetFont "RobotoCondensedBold";
-	_ArmaTeam4 buttonSetAction "call compile ctrlText 92372;";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscButton", 46657];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 ctrlSetPosition [-0.1625,0.0993939,0.0875,0.04];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 ctrlSetText "Execute";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg4 buttonSetAction "call compile ctrlText 92372;";
 
-	_ArmaTeam5 = (call _ArmaTeam1) ctrlCreate ["RscEdit", 92372];
-	_ArmaTeam5 ctrlCommit 0;
-	_ArmaTeam5 ctrlSetPosition [-0.1625,-0.236,0.2875,0.32];
-	_ArmaTeam5 ctrlCommit 0.5;
-	_ArmaTeam5 ctrlSetBackgroundColor [0.212,0.22,0.231,1];
-	_ArmaTeam5 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg5 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscEdit", 92372];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg5 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg5 ctrlSetPosition [-0.1625,-0.236,0.2875,0.32];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg5 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg5 ctrlSetBackgroundColor [0.212,0.22,0.231,1];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg5 ctrlSetFont "RobotoCondensedBold";
 
-	_ArmaTeam7 = (call _ArmaTeam1) ctrlCreate ["RscButton", 46657];
-	_ArmaTeam7 ctrlCommit 0;
-	_ArmaTeam7 ctrlSetPosition [0.0375,0.1,0.0875,0.04];
-	_ArmaTeam7 ctrlCommit 0.5;
-	_ArmaTeam7 ctrlSetText "Leave";
-	_ArmaTeam7 ctrlSetFont "RobotoCondensedBold";
-	_ArmaTeam7 buttonSetAction "endMission 'left';";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscButton", 46657];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 ctrlSetPosition [0.0375,0.1,0.0875,0.04];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 ctrlSetText "Leave";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg7 buttonSetAction "endMission 'left';";
 
-	_ArmaTeam8 = (call _ArmaTeam1) ctrlCreate ["RscButton", 46657];
-	_ArmaTeam8 ctrlCommit 0;
-	_ArmaTeam8 ctrlSetPosition [-0.0625,0.1,0.0875,0.04];
-	_ArmaTeam8 ctrlCommit 0.5;
-	_ArmaTeam8 ctrlSetText "Teleport";
-	_ArmaTeam8 ctrlSetFont "RobotoCondensedBold";
-	_ArmaTeam8 buttonSetAction "player onMapSingleClick 'if (_alt) then {player setPosATL _pos}';";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscButton", 46657];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlSetPosition [-0.0625,0.1,0.0875,0.04];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlSetText "Teleport";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 buttonSetAction "player onMapSingleClick 'if (_alt) then {player setPosATL _pos}';";
 
 
-	_ArmaTeam8 = (call _ArmaTeam1) ctrlCreate ["RscIGUIListBox", 46657];
-	_ArmaTeam8 ctrlCommit 0;
-	_ArmaTeam8 ctrlSetPosition [-0.6625,-0.236,0.4875,1.58];
-	_ArmaTeam8 ctrlCommit 0.5;
-	_ArmaTeam8 ctrlAddEventHandler ["LBDblClick", "[(findDisplay 0 displayCtrl 999 getVariable '_ListBoz') lbText (lbCurSel (findDisplay 0 displayCtrl 999 getVariable '_ListBoz')), (lbCurSel (findDisplay 0 displayCtrl 999 getVariable '_ListBoz'))] call (findDisplay 0 displayCtrl 999 getVariable '_Functions')"];
-	_ArmaTeam8 ctrlShow true;
-	findDisplay 0 displayCtrl 999 setVariable ['_ListBoz', _ArmaTeam8];
-	_ArmaTeam8 lbAdd "= General Scripts =";
-	_ArmaTeam8 lbAdd "Heal Self";
-	_ArmaTeam8 lbAdd "Kill Self";
-	_ArmaTeam8 lbAdd "God Mode";
-	_ArmaTeam8 lbAdd "Vehicle God";
-	_ArmaTeam8 lbAdd "Unlimited Ammo";
-	_ArmaTeam8 lbAdd "Arsenal";
-	_ArmaTeam8 lbAdd "No Recoil";
-	_ArmaTeam8 lbAdd "No Grass";
-	_ArmaTeam8 lbAdd "No Fatigue";
-	_ArmaTeam8 lbAdd "Player ESP";
-	_ArmaTeam8 lbAdd "Map ESP";
-	_ArmaTeam8 lbAdd "Speed Hack";
-	_ArmaTeam8 lbAdd "Refill Ammo";
-	_ArmaTeam8 lbAdd "Add Ammo";
-	_ArmaTeam8 lbAdd "Rapid Fire";
-	_ArmaTeam8 lbAdd "Murder Mode";
-	_ArmaTeam8 lbAdd "";
-	_ArmaTeam8 lbAdd "= Server Scripts =";
-	_ArmaTeam8 lbAdd "Kill Everyone";
-	_ArmaTeam8 lbAdd "Crash Server";
-	_ArmaTeam8 lbAdd "Crash Everyone";
-	_ArmaTeam8 lbAdd "Eject Everyone";
-	_ArmaTeam8 lbAdd "Paradrop Everyone";
-	_ArmaTeam8 lbAdd "Strip Down Everyone";
-	_ArmaTeam8 lbAdd "";
-	_ArmaTeam8 lbAdd "= Target Scripts =";
-	_ArmaTeam8 lbAdd "Kill Target";
-	_ArmaTeam8 lbAdd "Eject Target";
-	_ArmaTeam8 lbAdd "Bomb Target";
-	_ArmaTeam8 lbAdd "Clone on Target";
-	_ArmaTeam8 lbAdd "Clone from Target";
-	_ArmaTeam8 lbAdd "Paradrop Target";
-	_ArmaTeam8 lbAdd "Strip Down Target";
-	_ArmaTeam8 lbAdd "Crash Target";
-	_ArmaTeam8 lbAdd "";
-	_ArmaTeam8 lbAdd "= Life General =";
-	_ArmaTeam8 lbAdd "Give Licences";
-	_ArmaTeam8 lbAdd "Max Weight";
-	_ArmaTeam8 lbAdd "Unlock Cars (150m)";
-	_ArmaTeam8 lbAdd "Get Car Keys (150m)";
-	_ArmaTeam8 lbAdd "Get All Car Keys";
-	_ArmaTeam8 lbAdd "Disable Restrain";
-	_ArmaTeam8 lbAdd "Disable Taze";
-	_ArmaTeam8 lbAdd "Free Me";
-	_ArmaTeam8 lbAdd "Instant Respawn";
-	_ArmaTeam8 lbAdd "Spawn Money (5k-10k)";
-	_ArmaTeam8 lbAdd "Spawn Money (50k-150k)";
-	_ArmaTeam8 lbAdd "Spawn Money (500k-1000k)";
-	_ArmaTeam8 lbAdd "";
-	_ArmaTeam8 lbAdd "= Random Scripts =";
-	_ArmaTeam8 lbAdd "JME Blue Army";
-	_ArmaTeam8 lbAdd "JME Red VR";
-	_ArmaTeam8 lbAdd "Bruce Almighty";
-	_ArmaTeam8 lbAdd "Varible Scanner";
-	_ArmaTeam8 lbAdd "Executor";
-	_ArmaTeam8 lbAdd "Clone on Target";
-	_ArmaTeam8 lbAdd "Clone From Target";
-	_ArmaTeam8 lbAdd "";
-	_ArmaTeam8 lbAdd "= Life Everyone =";
-	_ArmaTeam8 lbAdd "Spawn Money Pile";
-	_ArmaTeam8 lbAdd "Restrain Everyone";
-	_ArmaTeam8 lbAdd "Jail Everyone";
-	_ArmaTeam8 lbAdd "Free Everyone";
-	_ArmaTeam8 ctrlSetFont "RobotoCondensedBold";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 = (call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg1) ctrlCreate ["RscIGUIListBox", 46657];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlCommit 0;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlSetPosition [-0.6625,-0.236,0.4875,1.58];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlCommit 0.5;
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlAddEventHandler ["LBDblClick", "[(findDisplay 0 displayCtrl 999 getVariable '_ListBoz') lbText (lbCurSel (findDisplay 0 displayCtrl 999 getVariable '_ListBoz')), (lbCurSel (findDisplay 0 displayCtrl 999 getVariable '_ListBoz'))] call (findDisplay 0 displayCtrl 999 getVariable '_Functions')"];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlShow true;
+	findDisplay 0 displayCtrl 999 setVariable ['_ListBoz', _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8];
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "= General Scripts =";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Heal Self";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Kill Self";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "God Mode";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Vehicle God";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Unlimited Ammo";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Arsenal";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "No Recoil";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "No Grass";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "No Fatigue";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Player ESP";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Map ESP";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Speed Hack";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Refill Ammo";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Add Ammo";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Rapid Fire";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Murder Mode";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "= Server Scripts =";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Kill Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Crash Server";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Crash Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Eject Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Paradrop Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Strip Down Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "= Target Scripts =";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Kill Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Eject Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Bomb Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Clone on Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Clone from Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Paradrop Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Strip Down Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Crash Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "= Life General =";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Give Licences";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Max Weight";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Unlock Cars (150m)";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Get Car Keys (150m)";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Get All Car Keys";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Disable Restrain";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Disable Taze";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Free Me";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Instant Respawn";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Spawn Money (5k-10k)";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Spawn Money (50k-150k)";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Spawn Money (500k-1000k)";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "= Random Scripts =";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "JME Blue Army";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "JME Red VR";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Bruce Almighty";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Varible Scanner";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Executor";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Clone on Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Clone From Target";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "= Life Everyone =";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Spawn Money Pile";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Restrain Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Jail Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 lbAdd "Free Everyone";
+	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg8 ctrlSetFont "RobotoCondensedBold";
 
 
 
@@ -149,7 +149,7 @@ createDialog "RscDisplayChat";
 
 			case 'Clone from Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 							player setUnitLoadout (getUnitLoadout _x);
 						};
 					}
@@ -158,7 +158,7 @@ createDialog "RscDisplayChat";
 
 			case 'Clone on Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 							_x setUnitLoadout (getUnitLoadout player);
 						};
 					}
@@ -167,7 +167,7 @@ createDialog "RscDisplayChat";
 
 			case 'Strip Down Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 							removeAllAssignedItems _x;
 							removeAllWeapons _x;
 							removeAllContainers _x;
@@ -183,7 +183,7 @@ createDialog "RscDisplayChat";
 
 			case 'Paradrop Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 						_x addBackpackGlobal"B_Parachute_F";_x setPos[10000,10000,1000]
 						};
 					}
@@ -192,7 +192,7 @@ createDialog "RscDisplayChat";
 
 			case 'Crash Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 						(_x) action["EJECT", vehicle _x];
 						_x setPos[99999999999,99999999999,99999999];
 						};
@@ -202,7 +202,7 @@ createDialog "RscDisplayChat";
 
 			case 'Bomb Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 							"HelicopterExploBig"
 							createVehicleLocal(getPos _x);
 						};
@@ -212,7 +212,7 @@ createDialog "RscDisplayChat";
 
 			case 'Kill Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 							_x setdamage 1;
 						};
 					}
@@ -221,7 +221,7 @@ createDialog "RscDisplayChat";
 
 			case 'Eject Target':{
 					{
-						if (name _x == _ArmaTeam11) then {
+						if (name _x == _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg11) then {
 							(_x) action["EJECT", vehicle _x];
 						};
 					}
@@ -314,11 +314,11 @@ createDialog "RscDisplayChat";
 				};
 
 			case 'No Fatigue':{
-					_ArmaTeamStamPlayer = player;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgStamPlayer = player;
 						life_hunger = 9999999;
 						life_thirst = 9999999;
 						[] call life_fnc_hudUpdate;
-						_ArmaTeamStamPlayer enableFatigue false;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgStamPlayer enableFatigue false;
 						life_maxWeight = 9999999;
 						life_maxWeightT = 9999999;
 				};
@@ -328,9 +328,9 @@ createDialog "RscDisplayChat";
 				};
 
 			case 'Max Weight':{
-					if(_ArmaTeam_AL_NoWeight_toggle) then {
+					if(_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_AL_NoWeight_toggle) then {
 						["TaskSucceeded",["","You now have no max weight!"]] call bis_fnc_showNotification;
-						while{_ArmaTeam_AL_NoWeight_toggle} do {
+						while{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_AL_NoWeight_toggle} do {
 							life_maxWeight = 1000000000000000000;
 							life_maxWeightT = 1000000000000000000;
 							life_carryWeight = 0;
@@ -355,24 +355,24 @@ createDialog "RscDisplayChat";
 						!(player != player) &&
 						!isNull (findDisplay 46)
 					};
-					_ArmaTeam_neo_cleanup = {
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_cleanup = {
 						{deleteVehicle _x;} forEach allDead;
 						{deleteVehicle _x;} forEach (position player nearObjects ["Land_CargoBox_V1_F",1000]);
-						_ArmaTeam_neo_count = 0;
-						hintSilent format ["Entities: %1", _ArmaTeam_neo_count];
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_count = 0;
+						hintSilent format ["Entities: %1", _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_count];
 					};
-					_ArmaTeam_neo_fnc_throw = {
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_fnc_throw = {
 						_height = getPosASL player select 2;
 						_height = _height + 5;
 						_pos = [player, 5, getDir player] call BIS_fnc_relPos;
 						_pos set [2, _height];
 						_object = objNull;
 
-						switch (_ArmaTeam_neo_type) do {
+						switch (_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_type) do {
 							case 0 : {
 								_class = "Land_CargoBox_V1_F";
 								_object = createVehicle [_class, position player, [], 0, "NONE"];
-								_object allowDamage _ArmaTeam_neo_damage;
+								_object allowDamage _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_damage;
 								_object setVectorUp [random 1, random 1, random 1];
 								_object setVectorDir [random 1, random 1, random 1];
 
@@ -380,26 +380,26 @@ createDialog "RscDisplayChat";
 							};
 						};
 
-						_object setVelocity [(eyeDirection player select 0) * _ArmaTeam_neo_force, (eyeDirection player select 1) * _ArmaTeam_neo_force, (eyeDirection player select 2) * _ArmaTeam_neo_force];
+						_object setVelocity [(eyeDirection player select 0) * _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force, (eyeDirection player select 1) * _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force, (eyeDirection player select 2) * _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force];
 
-						_ArmaTeam_neo_count = _ArmaTeam_neo_count + 1;
-						hintSilent format ["Entities: %1", _ArmaTeam_neo_count];
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_count = _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_count + 1;
+						hintSilent format ["Entities: %1", _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_count];
 					};
-					_ArmaTeam_neo_fnc_push = {
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_fnc_push = {
 						{
 							if (_x != player) then {
 								_dir = [player, _x] call BIS_fnc_dirTo;
-								_x setVelocity [sin _dir * _ArmaTeam_neo_force, cos _dir * _ArmaTeam_neo_force, _ArmaTeam_neo_force / 10];
+								_x setVelocity [sin _dir * _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force, cos _dir * _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force, _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force / 10];
 							};
 						} forEach (position player nearObjects 100);};
-					_ArmaTeam_neo_fnc_pull = {
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_fnc_pull = {
 						{
 							if (_x != player) then {
 								_dir = [_x, player] call BIS_fnc_dirTo;
 								_pos = getposatl _x;
 								_z = _pos select 2;
 								if(_z < 10) then {
-									_x setVelocity [sin _dir * random 10, cos _dir * random 5, _ArmaTeam_neo_force / 2];
+									_x setVelocity [sin _dir * random 10, cos _dir * random 5, _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force / 2];
 								} else {
 									_x setVelocity [sin _dir * random 10, cos _dir * random 5, 0];
 								};
@@ -407,43 +407,43 @@ createDialog "RscDisplayChat";
 						} forEach (position player nearObjects ["Land_CargoBox_V1_F",200]);
 					};
 
-					_ArmaTeam_neo_throwing = false;
-					_ArmaTeam_neo_pushing = false;
-					_ArmaTeam_neo_pulling = false;
-					_ArmaTeam_neo_type = 0;
-					_ArmaTeam_neo_damage = false;
-					_ArmaTeam_neo_count = 0;
-					_ArmaTeam_neo_force = 10;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_throwing = false;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pushing = false;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pulling = false;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_type = 0;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_damage = false;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_count = 0;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = 10;
 
-					findDisplay 46 displayAddEventHandler ["KeyDown", "if (_this select 1 == 2) then { _ArmaTeam_neo_throwing = true; }; if (_this select 1 == 4) then { _ArmaTeam_neo_pushing = true; }; if (_this select 1 == 3) then { _ArmaTeam_neo_pulling = true; };"];
-					findDisplay 46 displayAddEventHandler ["KeyUp", "if (_this select 1 == 2) then { _ArmaTeam_neo_throwing = false; }; if (_this select 1 == 4) then { _ArmaTeam_neo_pushing = false; }; if (_this select 1 == 3) then { _ArmaTeam_neo_pulling = false; };"];
+					findDisplay 46 displayAddEventHandler ["KeyDown", "if (_this select 1 == 2) then { _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_throwing = true; }; if (_this select 1 == 4) then { _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pushing = true; }; if (_this select 1 == 3) then { _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pulling = true; };"];
+					findDisplay 46 displayAddEventHandler ["KeyUp", "if (_this select 1 == 2) then { _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_throwing = false; }; if (_this select 1 == 4) then { _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pushing = false; }; if (_this select 1 == 3) then { _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pulling = false; };"];
 
 					onEachFrame {
-						if (_ArmaTeam_neo_throwing) then { [] call _ArmaTeam_neo_fnc_throw; };
-						if (_ArmaTeam_neo_pushing) then { [] call _ArmaTeam_neo_fnc_push; };
-						if (_ArmaTeam_neo_pulling) then { [] call _ArmaTeam_neo_fnc_pull; };
+						if (_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_throwing) then { [] call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_fnc_throw; };
+						if (_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pushing) then { [] call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_fnc_push; };
+						if (_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_pulling) then { [] call _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_fnc_pull; };
 					};
 
 
-					player addAction ["Force - LOW", 			{_ArmaTeam_neo_force = _this select 3;}, 10, -1, false, true, "", "_ArmaTeam_neo_force != 10"];
-					player addAction ["Force - MEDIUM", 		{_ArmaTeam_neo_force = _this select 3;}, 50, -1, false, true, "", "_ArmaTeam_neo_force != 50"];
-					player addAction ["Force - HIGH", 			{_ArmaTeam_neo_force = _this select 3;}, 100, -1, false, true, "", "_ArmaTeam_neo_force != 100"];
-					player addAction ["Force - HUGE", 			{_ArmaTeam_neo_force = _this select 3;}, 500, -1, false, true, "", "_ArmaTeam_neo_force != 500"];
-					player addAction ["Allow Damage", 			{_ArmaTeam_neo_force = _this select 3;}, true, -1, false, true, "", "!_ArmaTeam_neo_damage"];
-					player addAction ["Do Not Allow Damage", 	{_ArmaTeam_neo_force = _this select 3;}, false, -1, false, true, "", "_ArmaTeam_neo_damage"];
-					player addAction ["Clean Up", 				{[] spawn _ArmaTeam_neo_cleanup;}, [], -1, false, true, "", "true"];
+					player addAction ["Force - LOW", 			{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = _this select 3;}, 10, -1, false, true, "", "_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force != 10"];
+					player addAction ["Force - MEDIUM", 		{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = _this select 3;}, 50, -1, false, true, "", "_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force != 50"];
+					player addAction ["Force - HIGH", 			{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = _this select 3;}, 100, -1, false, true, "", "_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force != 100"];
+					player addAction ["Force - HUGE", 			{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = _this select 3;}, 500, -1, false, true, "", "_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force != 500"];
+					player addAction ["Allow Damage", 			{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = _this select 3;}, true, -1, false, true, "", "!_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_damage"];
+					player addAction ["Do Not Allow Damage", 	{_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_force = _this select 3;}, false, -1, false, true, "", "_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_damage"];
+					player addAction ["Clean Up", 				{[] spawn _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfg_neo_cleanup;}, [], -1, false, true, "", "true"];
 
 					hint "Welcome to the PhysX Hack\n\n\nPress 1 to spawn object with applied forces.\n\nPress 2 and 3 to apply forces to nearby objects.\n\n\nHave fun!";
 				};
 
 			case 'JME Red VR':{
 					hint "Jme is God";
-					_ArmaTeamJMEisGOD = group player createUnit ["O_Soldier_VR_F", Position player, [], 0, "FORM"];
-					player remoteControl _ArmaTeamJMEisGOD;
-					_ArmaTeamJMEisGOD switchCamera "EXTERNAL";
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisGOD = group player createUnit ["O_Soldier_VR_F", Position player, [], 0, "FORM"];
+					player remoteControl _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisGOD;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisGOD switchCamera "EXTERNAL";
 					(findDisplay 46) displayAddEventHandler['KeyDown', 'if ((_this select 1) == 0x44) then {
 						[] spawn {
-							_ArmaTeamJMEisGOD disableAI "MOVE";
+							_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisGOD disableAI "MOVE";
 							player switchCamera "EXTERNAL";
 						};
 						true
@@ -457,32 +457,32 @@ createDialog "RscDisplayChat";
 						closeDialog 0;
 						openMap false;
 						sleep 0.5;
-						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _ArmaTeamJMEisJesus = _grp createUnit ["B_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _ArmaTeamJMEisJesus]  join _grp ; _ArmaTeamJMEisJesus move position player ;};
+						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus = _grp createUnit ["B_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus]  join _grp ; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus move position player ;};
 						sleep 2;
-						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _ArmaTeamJMEisJesus = _grp createUnit ["O_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _ArmaTeamJMEisJesus]  join _grp ; _ArmaTeamJMEisJesus move position player ;};
+						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus = _grp createUnit ["O_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus]  join _grp ; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus move position player ;};
 						sleep 2;
-						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _ArmaTeamJMEisJesus = _grp createUnit ["I_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _ArmaTeamJMEisJesus]  join _grp ; _ArmaTeamJMEisJesus move position player ;};
+						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus = _grp createUnit ["I_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus]  join _grp ; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus move position player ;};
 						sleep 2;
-						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _ArmaTeamJMEisJesus = _grp createUnit ["C_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _ArmaTeamJMEisJesus]  join _grp ; _ArmaTeamJMEisJesus move position player ;};
+						for "_i" from 5 to 100 step 5 do {_grp = createGroup west; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus = _grp createUnit ["C_Soldier_VR_F", position player, [], 100, "FORM"] ; [ _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus]  join _grp ; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgJMEisJesus move position player ;};
 					};
 				};
 
 			case 'Murder Mode':{
-					_muddermode = (findDisplay 0 displayCtrl 999 getVariable '_ArmaTeamMurder');
+					_muddermode = (findDisplay 0 displayCtrl 999 getVariable '_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurder');
 					if (_muddermode == 0) then {
-						findDisplay 0 displayCtrl 999 setVariable ['_ArmaTeamMurder', 1];
-						findDisplay 0 displayCtrl 999 setVariable ['_ArmaTeamMurderEnable', _merder];
+						findDisplay 0 displayCtrl 999 setVariable ['_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurder', 1];
+						findDisplay 0 displayCtrl 999 setVariable ['_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurderEnable', _merder];
 					} else {
-						findDisplay 0 displayCtrl 999 setVariable ['_ArmaTeamMurder', 0];
-						_merder = (findDisplay 0 displayCtrl 999 getVariable '_ArmaTeamMurderEnable');
+						findDisplay 0 displayCtrl 999 setVariable ['_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurder', 0];
+						_merder = (findDisplay 0 displayCtrl 999 getVariable '_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurderEnable');
 					};
 					[] spawn {
-						while {(findDisplay 0 displayCtrl 999 getVariable '_ArmaTeamMurder') == 1} do {
+						while {(findDisplay 0 displayCtrl 999 getVariable '_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurder') == 1} do {
 							_merder = player addEventHandler ['Fired', {
 								_me = _this select 0;
 								_bullet = _this select 6;
-								_ArmaTeamMurderPlayas = (findDisplay 0 displayCtrl 999 getVariable '_ArmaTeamMurderPlayers');
-								_poorbastard = selectRandom _ArmaTeamMurderPlayas;
+								_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurderPlayas = (findDisplay 0 displayCtrl 999 getVariable '_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurderPlayers');
+								_poorbastard = selectRandom _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgMurderPlayas;
 								systemChat format ["Selected %1", _poorbastard];
 								if ((alive _poorbastard) && (_poorbastard != _me)) then {
 									_newPos = (eyepos _poorbastard);
@@ -517,7 +517,7 @@ createDialog "RscDisplayChat";
 				};
 
 			case 'Varible Scanner':{
-				_ArmaTeamVarscPlayer = player; _ArmaTeamVarscPlayer addAction ["<t size=""1.1"" font=""TahomaB"" color=""#FFFFFF"">Open Variable Scanner</t>",{_Dialog = [	[1100,"",[1,"Variable Scanner by Arma.Team",[0.371093 * safezoneW + safezoneX,0.225 * safezoneH + safezoneY,0.257813 * safezoneW,0.022 * safezoneH],[1,1,1,1],[0.9,0.4,0.6,1],[-1,-1,-1,-1],",-1"],[]],	[2200,"",[1,"",[0.371095 * safezoneW + safezoneX,0.247 * safezoneH + safezoneY,0.257813 * safezoneW,0.396 * safezoneH],[-1,-1,-1,-1],[0,0,0,0.5],[-1,-1,-1,-1],",-1"],[]],	[1402,"",[1,"",[0.37625 * safezoneW + safezoneX,0.39 * safezoneH + safezoneY,0.2475 * safezoneW,0.154 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[1500,"",[1,"",[0.37625 * safezoneW + safezoneX,0.39 * safezoneH + safezoneY,0.2475 * safezoneW,0.154 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[0,0,0,0],",-1"],[]],	[1400,"",[1,"                                    >>Current Variable Value<<",[0.37625 * safezoneW + safezoneX,0.258 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[2100,"",[1,"",[0.37625 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[1,1,1,1],[0,0,0,0],[0,0,0,0],",-1"],[]],	[1600,"",[1,"Search for this value",[0.37625 * safezoneW + safezoneX,0.346 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[1601,"",[1,"Edit Value",[0.37625 * safezoneW + safezoneX,0.599 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[1401,"",[1,"                                      >>New Variable Value<<",[0.37625 * safezoneW + safezoneX,0.555 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]]];(finddisplay 46) createDisplay "RscDisplayChat";{	private["_ctrl","_buttonaction","_text","_secondarray","_activecolor","_textcolor","_backcolor","_pos","_idc","_classname","_ctrltype"];	_idc = _x select 0;	_classname = _x select 1;	_secondarray = (_x select 2);	_text = _secondarray select 1;	_pos = _secondarray select 2;	_textcolor = _secondarray select 3;	_backcolor = _secondarray select 4;	_activecolor = _secondarray select 5;	_buttonaction = _secondarray select 6;	_ctrltype = (format["%1",_idc] select [0,2]);	_ctrltype = call compile _ctrltype;	_ctrltype = switch(_ctrltype) do {		case 11: {"RscStructuredText"};		case 12: {"RscPicture"};		case 14: {"RscEdit"};		case 15: {"RscListBox"};		case 16: {"RscButton"};		case 21: {"RscCombo"};		case 22: {"RscBackground"};	};	_ctrl = (finddisplay 24) ctrlCreate [_ctrltype, _idc];	_ctrl ctrlSetPosition _pos;	if(_ctrltype != "RscTree") then {		_ctrl ctrlSetTextColor _textcolor;		_ctrl ctrlSetBackgroundColor _backcolor;		_ctrl ctrlSetActiveColor _activecolor;		_ctrl ctrlSetText _text;	};	if!(_buttonaction == "") then {		_ctrl buttonsetAction _buttonaction;	};	_ctrl ctrlCommit 0.3;	_ArmaTeamVarscPlayer setVariable ["MLRN_ALLCTRLS",(_ArmaTeamVarscPlayer getVariable "MLRN_ALLCTRLS") + [_ctrl]];}forEach _Dialog;((finddisplay 24) displayCtrl 2100) lbAdd "STRING"; ((finddisplay 24) displayCtrl 2100) lbAdd "CODE"; ((finddisplay 24) displayCtrl 2100) lbAdd "SCALAR"; ((finddisplay 24) displayCtrl 2100) lbAdd "BOOLEAN"; ((finddisplay 24) displayCtrl 2100) lbSetCurSel 0;((finddisplay 24) displayCtrl 1600) buttonSetAction '	if(ctrlText((finddisplay 24) displayCtrl 1400) == "") exitWith {hint "You have to enter a value"};	private["_vars"];	_vars = [];	{		_type = ((finddisplay 24) displayCtrl 2100) lbText lbCurSel ((finddisplay 24) displayCtrl 2100);		_value = ctrlText((finddisplay 24) displayCtrl 1400);  		if(typeName(missionNamespace getVariable _x) == _type) then {if(format["%1",(missionNamespace getVariable _x)] == _value) then {_vars pushBack [_x,missionNamespace getVariable _x]}};	}	forEach allVariables missionNamespace;	if(count _vars == 0) exitWith {hint "[FAILED] No Variables with this value..."};	lbClear ((finddisplay 24) displayCtrl 1500);	{		((finddisplay 24) displayCtrl 1500) lbAdd format["%1 | %2",_x select 0,format["%1",_x select 1]];		((finddisplay 24) displayCtrl 1500) lbSetData [(lbSize((finddisplay 24) displayCtrl 1500))-1,_x select 0];	}	forEach _vars;	hint "[SUCCESS] Variables found...";	((finddisplay 24) displayCtrl 1500) lbSetCurSel 0;';((finddisplay 24) displayCtrl 1601) buttonSetAction '	_newvalue = ctrlText((finddisplay 24) displayCtrl 1401);	_currvar = ((finddisplay 24) displayCtrl 1500) lbData lbCurSel ((finddisplay 24) displayCtrl 1500);	call compile format["%1 = %2;",_currvar,_newvalue];	hint "[SUCCESS] Changed Variable Value";	(finddisplay 24) closeDisplay 0;'}]; _ArmaTeamVarscPlayer addAction ["<t size=""1.1"" font=""TahomaB"" color=""#F76060"">Remove Variable Scanner</t>","removeAllActions player"];
+				_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgVarscPlayer = player; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgVarscPlayer addAction ["<t size=""1.1"" font=""TahomaB"" color=""#FFFFFF"">Open Variable Scanner</t>",{_Dialog = [	[1100,"",[1,"Variable Scanner by Arma.Team",[0.371093 * safezoneW + safezoneX,0.225 * safezoneH + safezoneY,0.257813 * safezoneW,0.022 * safezoneH],[1,1,1,1],[0.9,0.4,0.6,1],[-1,-1,-1,-1],",-1"],[]],	[2200,"",[1,"",[0.371095 * safezoneW + safezoneX,0.247 * safezoneH + safezoneY,0.257813 * safezoneW,0.396 * safezoneH],[-1,-1,-1,-1],[0,0,0,0.5],[-1,-1,-1,-1],",-1"],[]],	[1402,"",[1,"",[0.37625 * safezoneW + safezoneX,0.39 * safezoneH + safezoneY,0.2475 * safezoneW,0.154 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[1500,"",[1,"",[0.37625 * safezoneW + safezoneX,0.39 * safezoneH + safezoneY,0.2475 * safezoneW,0.154 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[0,0,0,0],",-1"],[]],	[1400,"",[1,"                                    >>Current Variable Value<<",[0.37625 * safezoneW + safezoneX,0.258 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[2100,"",[1,"",[0.37625 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[1,1,1,1],[0,0,0,0],[0,0,0,0],",-1"],[]],	[1600,"",[1,"Search for this value",[0.37625 * safezoneW + safezoneX,0.346 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[1601,"",[1,"Edit Value",[0.37625 * safezoneW + safezoneX,0.599 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]],	[1401,"",[1,"                                      >>New Variable Value<<",[0.37625 * safezoneW + safezoneX,0.555 * safezoneH + safezoneY,0.2475 * safezoneW,0.033 * safezoneH],[0.9,0.4,0.6,1],[-1,-1,-1,-1],[-1,-1,-1,-1],",-1"],[]]];(finddisplay 46) createDisplay "RscDisplayChat";{	private["_ctrl","_buttonaction","_text","_secondarray","_activecolor","_textcolor","_backcolor","_pos","_idc","_classname","_ctrltype"];	_idc = _x select 0;	_classname = _x select 1;	_secondarray = (_x select 2);	_text = _secondarray select 1;	_pos = _secondarray select 2;	_textcolor = _secondarray select 3;	_backcolor = _secondarray select 4;	_activecolor = _secondarray select 5;	_buttonaction = _secondarray select 6;	_ctrltype = (format["%1",_idc] select [0,2]);	_ctrltype = call compile _ctrltype;	_ctrltype = switch(_ctrltype) do {		case 11: {"RscStructuredText"};		case 12: {"RscPicture"};		case 14: {"RscEdit"};		case 15: {"RscListBox"};		case 16: {"RscButton"};		case 21: {"RscCombo"};		case 22: {"RscBackground"};	};	_ctrl = (finddisplay 24) ctrlCreate [_ctrltype, _idc];	_ctrl ctrlSetPosition _pos;	if(_ctrltype != "RscTree") then {		_ctrl ctrlSetTextColor _textcolor;		_ctrl ctrlSetBackgroundColor _backcolor;		_ctrl ctrlSetActiveColor _activecolor;		_ctrl ctrlSetText _text;	};	if!(_buttonaction == "") then {		_ctrl buttonsetAction _buttonaction;	};	_ctrl ctrlCommit 0.3;	_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgVarscPlayer setVariable ["MLRN_ALLCTRLS",(_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgVarscPlayer getVariable "MLRN_ALLCTRLS") + [_ctrl]];}forEach _Dialog;((finddisplay 24) displayCtrl 2100) lbAdd "STRING"; ((finddisplay 24) displayCtrl 2100) lbAdd "CODE"; ((finddisplay 24) displayCtrl 2100) lbAdd "SCALAR"; ((finddisplay 24) displayCtrl 2100) lbAdd "BOOLEAN"; ((finddisplay 24) displayCtrl 2100) lbSetCurSel 0;((finddisplay 24) displayCtrl 1600) buttonSetAction '	if(ctrlText((finddisplay 24) displayCtrl 1400) == "") exitWith {hint "You have to enter a value"};	private["_vars"];	_vars = [];	{		_type = ((finddisplay 24) displayCtrl 2100) lbText lbCurSel ((finddisplay 24) displayCtrl 2100);		_value = ctrlText((finddisplay 24) displayCtrl 1400);  		if(typeName(missionNamespace getVariable _x) == _type) then {if(format["%1",(missionNamespace getVariable _x)] == _value) then {_vars pushBack [_x,missionNamespace getVariable _x]}};	}	forEach allVariables missionNamespace;	if(count _vars == 0) exitWith {hint "[FAILED] No Variables with this value..."};	lbClear ((finddisplay 24) displayCtrl 1500);	{		((finddisplay 24) displayCtrl 1500) lbAdd format["%1 | %2",_x select 0,format["%1",_x select 1]];		((finddisplay 24) displayCtrl 1500) lbSetData [(lbSize((finddisplay 24) displayCtrl 1500))-1,_x select 0];	}	forEach _vars;	hint "[SUCCESS] Variables found...";	((finddisplay 24) displayCtrl 1500) lbSetCurSel 0;';((finddisplay 24) displayCtrl 1601) buttonSetAction '	_newvalue = ctrlText((finddisplay 24) displayCtrl 1401);	_currvar = ((finddisplay 24) displayCtrl 1500) lbData lbCurSel ((finddisplay 24) displayCtrl 1500);	call compile format["%1 = %2;",_currvar,_newvalue];	hint "[SUCCESS] Changed Variable Value";	(finddisplay 24) closeDisplay 0;'}]; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgVarscPlayer addAction ["<t size=""1.1"" font=""TahomaB"" color=""#F76060"">Remove Variable Scanner</t>","removeAllActions player"];
 				};
 
 			case 'Spawn Money (500k-1000k)':{
@@ -550,8 +550,8 @@ createDialog "RscDisplayChat";
 				};
 
 			case 'Free Me':{
-					_ArmaTeamRestrainPlayer = player;
-					_ArmaTeamRestrainPlayer setVariable["restrained",false,true];
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRestrainPlayer = player;
+					_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRestrainPlayer setVariable["restrained",false,true];
 				};
 
 			case 'Disable Taze':{
@@ -671,11 +671,11 @@ createDialog "RscDisplayChat";
 					} else {
 						ArmaTeamGodToggle = 0;
 						systemChat "God Mode OFF";
-						_ArmaTeamGodRemovePlayer = player; _ArmaTeamAmmoRemovePlayer allowDamage true;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgGodRemovePlayer = player; _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgAmmoRemovePlayer allowDamage true;
 					};
 					while {ArmaTeamGodToggle == 1} do {
-						_ArmaTeamGodPlayer = player;
-						_ArmaTeamGodPlayer allowDamage false;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgGodPlayer = player;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgGodPlayer allowDamage false;
 					};
 				};
 
@@ -705,14 +705,14 @@ createDialog "RscDisplayChat";
 					} else {
 						ArmaTeamRecoilToggle = 0;
 						systemChat "No Recoil OFF";
-						_ArmaTeamRecoilRemovePlayer = player;
-						_ArmaTeamRecoilRemovePlayer setUnitRecoilCoefficient 1;
-						_ArmaTeamRecoilRemovePlayer setCustomAimCoef 1;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilRemovePlayer = player;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilRemovePlayer setUnitRecoilCoefficient 1;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilRemovePlayer setCustomAimCoef 1;
 					};
 					while {ArmaTeamRecoilToggle == 1} do {
-						_ArmaTeamRecoilPlayer = player;
-						_ArmaTeamRecoilPlayer setUnitRecoilCoefficient 0;
-						_ArmaTeamRecoilPlayer setCustomAimCoef 0.001;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilPlayer = player;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilPlayer setUnitRecoilCoefficient 0;
+						_samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilPlayer setCustomAimCoef 0.001;
 					};
 				};
 
