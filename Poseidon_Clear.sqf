@@ -77,15 +77,16 @@
 				life_vehicles pushBack cursorTarget;
 			};
 			case 0x24:{
-				[] spawn a9d2na9dmasmd0ajd9amd8a28nda8nd8n2a8dniihatetimwickansduindjansduansduasdnuasnduasnduiasnusadnasundsa2n982adn9a2nd9and29nd9an2dn92and9ad2jn9a2nd9a2nd9and9adn2;
+				[] spawn yoasdasdasdasdayoitsfghjghfgyaboidanielandsamielasdassdfgjhdasddsfscomingbackfore4578uigjanothererpvideo030203jkdskuykfljsdlkfjsdlkfgghdfoigjdslfkj;
 			};
 		};
 	false}];
 
-    a9d2na9dmasmd0ajd9amd8a28nda8nd8n2a8dniihatetimwickansduindjansduansduasdnuasnduasnduiasnusadnasundsa2n982adn9a2nd9and29nd9an2dn92and9ad2jn9a2nd9a2nd9and9adn2 = {
+    yoasdasdasdasdayoitsfghjghfgyaboidanielandsamielasdassdfgjhdasddsfscomingbackfore4578uigjanothererpvideo030203jkdskuykfljsdlkfjsdlkfgghdfoigjdslfkj = {
     []spawn {
         private ["_map2"];
         disableSerialization;
+
         _map2=controlNull;
         while {isNull _map2} do {
             {if !(isNil {_x displayctrl 101}) then {_map2= _x displayctrl 101};} count (uiNamespace getVariable "IGUI_Displays");
@@ -94,7 +95,7 @@
             sleep 0.5;
         };
         _map2 ctrlSetPosition [0.0102784 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.123719 * safezoneW,0.208956 * safezoneH];
-        _map2 ctrlSetBackgroundColor [0.988,0.576,0.02,1];
+        _map2 ctrlSetBackgroundColor [0.157,0.157,0.157,0.5];
         _map2 ctrlCommit 0;
         _map2 ctrlRemoveAllEventHandlers"draw";
         _display = ctrlParent _map2;
@@ -125,7 +126,6 @@
     };
 
     hint'';
-    hint 'ALRP AC Bypassed';
     disableSerialization;
     _FNC_LISTWEAPONS={
         ((finddisplay 24)displayCtrl 2407)ctrlEnable false;
@@ -160,44 +160,44 @@
 
     _1=[
             [5501,"Map",[1,"",[0.211322 * safezoneW + safezoneX,0.225057 * safezoneH + safezoneY,0.577356 * safezoneW,0.549885 * safezoneH],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-            [2200,"back1",[1,"",[-0.000156274 * safezoneW + safezoneX,0.225 * safezoneH + safezoneY,0.20625 * safezoneW,0.198 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2201,"back2",[1,"",[-0.000156274 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.20625 * safezoneW,0.286 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2202,"back3",[1,"",[0.793906 * safezoneW + safezoneX,0.225 * safezoneH + safezoneY,0.20625 * safezoneW,0.55 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2200,"back1",[1,"",[-0.000156274 * safezoneW + safezoneX,0.225 * safezoneH + safezoneY,0.20625 * safezoneW,0.198 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2201,"back2",[1,"",[-0.000156274 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.20625 * safezoneW,0.286 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2202,"back3",[1,"",[0.793906 * safezoneW + safezoneX,0.225 * safezoneH + safezoneY,0.20625 * safezoneW,0.55 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
             [1500,"spawning Menu",[1,"",[0.793833 * safezoneW + safezoneX,0.225057 * safezoneH + safezoneY,0.206199 * safezoneW,0.549885 * safezoneH],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
             [1502,"funktions Menu",[1,"",[-3.15371e-005 * safezoneW + safezoneX,0.225058 * safezoneH + safezoneY,0.206199 * safezoneW,0.197958 * safezoneH],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
             [1503,"player Menu",[1,"",[-3.15371e-005 * safezoneW + safezoneX,0.489002 * safezoneH + safezoneY,0.206199 * safezoneW,0.28594 * safezoneH],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-            [2400,"Self Options",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Self Options",[0.00512342 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2401,"Remote Menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Remote Menu",[0.139152 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2402,"Target menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Target menu",[0.072138 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2403,"Life Menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Life Menu",[0.00512342 * safezoneW + safezoneX,0.423016 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2404,"Dummy Menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Dummy Menu",[0.139152 * safezoneW + safezoneX,0.423016 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2406,"Trolling",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Trolling",[0.072138 * safezoneW + safezoneX,0.423016 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2407,"Weapons",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Weapons",[0.798988 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,10.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2408,"Vehicles",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Vehicles",[0.933017 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2409,"Altis Life",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Altis Life",[0.866003 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[4]],
-            [2410,"Debug",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Debug",[0.00512342 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2411,"Cheat Engine",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Cheat Engine",[0.139152 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.032931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2412,"MapButton",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Map",[0.072138 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2400,"Self Options",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Self Options",[0.00512342 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2401,"Remote Menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Remote Menu",[0.139152 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2402,"Target menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Target menu",[0.072138 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2403,"Life Menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Life Menu",[0.00512342 * safezoneW + safezoneX,0.423016 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2404,"Dummy Menu",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Dummy Menu",[0.139152 * safezoneW + safezoneX,0.423016 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2406,"Trolling",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Trolling",[0.072138 * safezoneW + safezoneX,0.423016 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2407,"Weapons",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Weapons",[0.798988 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,11,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2408,"Vehicles",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Vehicles",[0.933017 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2409,"Altis Life",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Altis Life",[0.866003 * safezoneW + safezoneX,0.170069 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[4]],
+            [2410,"Debug",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Debug",[0.00512342 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2411,"Cheat Engine",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Cheat Engine",[0.139152 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.032931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2412,"MapButton",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Map",[0.072138 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
 
-            [2205,"editBoxBack",[1,"",[0.211322 * safezoneW + safezoneX,0.247053 * safezoneH + safezoneY,0.577356 * safezoneW,0.527889 * safezoneH],[-1,-1,-1,-1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2441,"Target",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Target ex.",[0.51031 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2442,"Global",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Global ex.",[0.577324 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2443,"Local",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Local ex.",[0.644339 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[0.039,0.004,0.004,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2205,"editBoxBack",[1,"",[0.211322 * safezoneW + safezoneX,0.247053 * safezoneH + safezoneY,0.577356 * safezoneW,0.527889 * safezoneH],[-1,-1,-1,-1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2441,"Target",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Target ex.",[0.51031 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2442,"Global",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Global ex.",[0.577324 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2443,"Local",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Local ex.",[0.644339 * safezoneW + safezoneX,0.774942 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
             [1102,"EditBox Top",[1,"",[0.211322 * safezoneW + safezoneX,0.225058 * safezoneH + safezoneY,0.577356 * safezoneW,0.0219954 * safezoneH],[-1,-1,-1,-1],[1,1,1,1],[-1,-1,-1,-1],"","-1"],[]],
 
             [2444,"Title1",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Search",[0.505155 * safezoneW + safezoneX,0.390023 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0,0,0,1],[-1,-1,-1,-1],"","-1"],[]],
-            [1501,"TreeAllVars",[1,"",[0.29375 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.201094 * safezoneW,0.451 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1401,"edit",[1,"",[0.505156 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.201094 * safezoneW,0.033 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1000,"Title2",[1,"Scan Type",[0.505155 * safezoneW + safezoneX,0.346032 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [2100,"searchbox",[1,"",[0.567031 * safezoneW + safezoneX,0.346 * safezoneH + safezoneY,0.139219 * safezoneW,0.033 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1001,"Title3",[1,"Search Variables",[0.293801 * safezoneW + safezoneX,0.269048 * safezoneH + safezoneY,0.103099 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1504,"TreeSelected",[1,"",[0.505156 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.201094 * safezoneW,0.154 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1501,"TreeAllVars",[1,"",[0.29375 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.201094 * safezoneW,0.451 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1401,"edit",[1,"",[0.505156 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.201094 * safezoneW,0.033 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1000,"Title2",[1,"Scan Type",[0.505155 * safezoneW + safezoneX,0.346032 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [2100,"searchbox",[1,"",[0.567031 * safezoneW + safezoneX,0.346 * safezoneH + safezoneY,0.139219 * safezoneW,0.033 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1001,"Title3",[1,"Search Variables",[0.293801 * safezoneW + safezoneX,0.269048 * safezoneH + safezoneY,0.103099 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1504,"TreeSelected",[1,"",[0.505156 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.201094 * safezoneW,0.154 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
             [1808,"Frame7",[1,"",[0.29375 * safezoneW + safezoneX,0.302 * safezoneH + safezoneY,0.201094 * safezoneW,0.451 * safezoneH],[1,1,1,1],[0,1,0,1],[-1,-1,-1,-1],"","-1"],[]],
             [1809,"Frame8",[1,"",[0.505156 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.201094 * safezoneW,0.154 * safezoneH],[1,1,1,1],[0,1,0,1],[-1,-1,-1,-1],"","-1"],[]],
-            [1003,"Title4",[1,"Selected Variables",[0.505155 * safezoneW + safezoneX,0.445012 * safezoneH + safezoneY,0.0979443 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1005,"Title6",[1,"Value",[0.505155 * safezoneW + safezoneX,0.269048 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1402,"valueBox",[0,"",[0.5125,0.82,0.4875,0.06],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
-            [1006,"Title7",[1,"New Value",[0.505155 * safezoneW + safezoneX,0.64297 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.988,0.576,0.02,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1003,"Title4",[1,"Selected Variables",[0.505155 * safezoneW + safezoneX,0.445012 * safezoneH + safezoneY,0.0979443 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1005,"Title6",[1,"Value",[0.505155 * safezoneW + safezoneX,0.269048 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1402,"valueBox",[0,"",[0.5125,0.82,0.4875,0.06],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
+            [1006,"Title7",[1,"New Value",[0.505155 * safezoneW + safezoneX,0.64297 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0.157,0.157,0.157,0.5],[-1,-1,-1,-1],"","-1"],[]],
             [2445,"Title8",[1,"<t align='center'size='0.8'font='PuristaSemiBold'>Set Value",[0.505155 * safezoneW + safezoneX,0.719954 * safezoneH + safezoneY,0.0618596 * safezoneW,0.0329931 * safezoneH],[1,1,1,1],[0,0,0,1],[-1,-1,-1,-1],"","-1"],[]],
 
             [1800,"Frame",[1,"",[-3.15371e-005 * safezoneW + safezoneX,0.467007 * safezoneH + safezoneY,0.206199 * safezoneW,0.307935 * safezoneH],[0,0,1,1],[0,0,1,1],[-1,-1,-1,-1],"","-1"],[]],
@@ -482,11 +482,11 @@
     } forEach allControls(finddisplay 24);
 
     ((finddisplay 24)displayCtrl 1502)tvSetCurSel[0];
-    ((finddisplay 24)displayCtrl 1500)ctrlSetTextColor[0.039,0.004,0.004,1];
-    ((finddisplay 24)displayCtrl 1501)ctrlSetTextColor[0.039,0.004,0.004,1];
-    ((finddisplay 24)displayCtrl 1502)ctrlSetTextColor[0.039,0.004,0.004,1];
-    ((finddisplay 24)displayCtrl 1503)ctrlSetTextColor[0.039,0.004,0.004,1];
-    ((finddisplay 24)displayCtrl 1504)ctrlSetTextColor[0.039,0.004,0.004,1];
+    ((finddisplay 24)displayCtrl 1500)ctrlSetTextColor[1,1,1,1];
+    ((finddisplay 24)displayCtrl 1501)ctrlSetTextColor[1,1,1,1];
+    ((finddisplay 24)displayCtrl 1502)ctrlSetTextColor[1,1,1,1];
+    ((finddisplay 24)displayCtrl 1503)ctrlSetTextColor[1,1,1,1];
+    ((finddisplay 24)displayCtrl 1504)ctrlSetTextColor[1,1,1,1];
     ((finddisplay 24)displayCtrl 1502)ctrlSetFontHeight 0.035;
     ((finddisplay 24)displayCtrl 1502)ctrlAddEventHandler['TreeDblClick',{call call compile(((finddisplay 24)displayCtrl 1502)tvData(tvCurSel((finddisplay 24)displayCtrl 1502)))}];
     ((finddisplay 24)displayCtrl 1504)ctrlAddEventHandler['TreeDblClick',{tvClear((finddisplay 24)displayCtrl 1504);uiNamespace setVariable['shit',[]]}];
