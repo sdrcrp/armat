@@ -450,11 +450,11 @@ atInfAmmo = {
 			};
 		};
 
-		systemChat 'AT: Non-finite ammo enabled';
+		systemChat 'AT: Unlimited ammo enabled';
 	} else {
 		atInfAmmoToggle = false;
 
-		systemChat 'AT: Non-finite ammo disabled';
+		systemChat 'AT: Unlimited ammo disabled';
 	};
 };
 
@@ -919,7 +919,7 @@ fillPlayerList = {
 	lbClear _playerList;
 	lbClear _targetList;
 
-	_playerList lbAdd '---ats---';
+	_playerList lbAdd '---You---';
 	_playerList lbSetColor [(lbSize 10002)-1,[0.6,1,0.4,1]];
 
 	{
@@ -1551,7 +1551,7 @@ handleatFuncs = {
 		case 'AI ESP': {call showatMenu; call atAiESP;};
 		case 'Map Markers': {call showatMenu; call atMarkers;};
 		case 'Dead Markers': {call showatMenu; call atDeadMarkers;};
-		case 'Non-finite Ammo': {call showatMenu; call atInfAmmo;};
+		case 'Unlmited Ammo': {call showatMenu; call atInfAmmo;};
 		case 'Rapid Fire': {call showatMenu; call atRapidFire;};
 		case 'No Recoil': {call showatMenu; call atRecoil;};
 		case 'No Sway': {call showatMenu; call atSway;};
@@ -1565,7 +1565,7 @@ handleatFuncs = {
 		case 'Sort Player by Name': {sortByName = !sortByName; call showatMenu;};
 		case 'List AIs': {atListAis = !atListAis; call showatMenu;};
 		case 'Copy Players Loadout': {call copyPlayerLoadout};
-		case 'FreeCams(.com)': {closeDialog 0; [] call bis_fnc_camera;};
+		case 'Free Cam': {closeDialog 0; [] call bis_fnc_camera;};
 		case 'Virtual Arsenal': { closeDialog 0; [] spawn atArsenal;};
 		case 'Revive Near Players': { call atReviveNear; };
 		case 'Give Ammo': { [] call atGiveAmmo; };
@@ -1958,7 +1958,7 @@ showatMenu = {
 	_atMenu = [_atMenu, ['AI ESP','toggle']] call addToatList;
 	_atMenu = [_atMenu, ['Map Markers','toggle']] call addToatList;
 	_atMenu = [_atMenu, ['Dead Markers','toggle']] call addToatList;
-	_atMenu = [_atMenu, ['Non-finite Ammo','toggle']] call addToatList;
+	_atMenu = [_atMenu, ['Unlimited Ammo','toggle']] call addToatList;
 	_atMenu = [_atMenu, ['Rapid Fire','toggle']] call addToatList;
 	_atMenu = [_atMenu, ['No Recoil','toggle']] call addToatList;
 	_atMenu = [_atMenu, ['No Sway','toggle']] call addToatList;
@@ -1973,7 +1973,7 @@ showatMenu = {
 	_atMenu = [_atMenu, ['List AIs','toggle']] call addToatList;
 	_atMenu = [_atMenu, ['---------------','spacer']] call addToatList;
 	_atMenu = [_atMenu, ['Copy Players Loadout','blue']] call addToatList;
-	_atMenu = [_atMenu, ['FreeCams(.com)','blue']] call addToatList;
+	_atMenu = [_atMenu, ['Free Cam','blue']] call addToatList;
 	_atMenu = [_atMenu, ['Virtual Arsenal','blue']] call addToatList;
 	_atMenu = [_atMenu, ['Revive Near Players','blue']] call addToatList;
 	_atMenu = [_atMenu, ['Give Ammo', 'blue']] call addToatList;
