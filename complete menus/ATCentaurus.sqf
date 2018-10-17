@@ -1,11 +1,8 @@
 waitUntil {!isNull (findDisplay 46)};
-(findDisplay 46) displayAddEventHandler['KeyDown','if (_this select 1 == 210) then { call showAdminMenu; };'];
+(findDisplay 46) displayAddEventHandler['KeyDown','if (_this select 1 == 210) then { call showARMATEAMMenu; };'];
 (findDisplay 46) displayAddEventHandler['KeyDown','_key = _this select 1; if (_key in [0xD3,0x06,0x08,0xCF,0x3F,0x3B,0x3C] && (_this select 2)) then { [_key] call hotkeyHandler; };'];
 
-systemChat 'ANTI-HAX: Welcome Admin! Loading Admin Panel!';
-
-[parseText "<t font='PuristaBold' align='center' size='1.6'>Admin Menu</t><br /><t align='center'>by Hail The JiJi</t>",
-	[safeZoneX + safeZoneW/6,safeZoneY + safeZoneH/6,0.5,1], nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+systemChat 'ARMA.TEAM: Welcome User! Loading Menu';
 
 AH_TimeStr = {
 	[serverTime, "HH:MM"] call BIS_fnc_secondsToString
@@ -15,7 +12,7 @@ AllWeapons = [];
 AllVehicles = [];
 TargetObject = objNull;
 sortByName = false;
-AdminListAis = false;
+ARMATEAMListAis = false;
 
 _cfgWeapons = configFile >> 'CfgWeapons';
 for '_i' from 0 to (count _cfgWeapons)-1 do {
@@ -30,7 +27,7 @@ for '_i' from 0 to (count _cfgWeapons)-1 do {
 
 		if ((_pic != '')) then {
 			if ((_trimStart != 'H_') && (_trimStart != 'V_') && (_trimStart != 'U_')) then {
-				AllWeapons pushBackUnique [_name, _pic, _displayName]; 
+				AllWeapons pushBackUnique [_name, _pic, _displayName];
 			};
 		};
 	};
@@ -124,7 +121,7 @@ hotkeyHandler = {
 	};
 
 	if (_key == 0x3C) exitWith {
-		[player] call adminHeal;
+		[player] call ARMATEAMHeal;
 	};
 
 	if (_key == 0x06) exitWith {
@@ -143,7 +140,6 @@ hotkeyHandler = {
 	};
 
 	if (_key == 0x3F) exitWith {
-		comment 'tired af while writing this';
 		_obj = cursorTarget;
 		_pos = [];
 		if (isNull _obj) then {
@@ -168,14 +164,14 @@ hotkeyHandler = {
 	};
 };
 
-adminGod = {
-	if (isNil 'adminGodToggle') then {adminGodToggle = false};
-	if (!adminGodToggle) then {
-		adminGodToggle = true;
-		systemChat 'AH: Admin God Enabled';
+ARMATEAMGod = {
+	if (isNil 'ARMATEAMGodToggle') then {ARMATEAMGodToggle = false};
+	if (!ARMATEAMGodToggle) then {
+		ARMATEAMGodToggle = true;
+		systemChat 'AT: God Enabled';
 
 		[] spawn {
-			while {adminGodToggle} do {
+			while {ARMATEAMGodToggle} do {
 				player removeAllEventHandlers 'HandleDamage';
 				player addEventHandler ['HandleDamage', {0}];
 				player allowDamage false;
@@ -187,20 +183,20 @@ adminGod = {
 		};
 
 	} else {
-		adminGodToggle = false;
-		systemChat 'AH: Admin God Disabled';
+		ARMATEAMGodToggle = false;
+		systemChat 'AT: God Disabled';
 
 		player allowDamage true;
 		player removeAllEventHandlers 'HandleDamage';
 	};
 };
-adminVGod = {
-	if (isNil 'adminVGodToggle') then {adminVGodToggle = false};
+ARMATEAMVGod = {
+	if (isNil 'ARMATEAMVGodToggle') then {ARMATEAMVGodToggle = false};
 
-	if (!adminVGodToggle) then {
-		adminVGodToggle = true;
+	if (!ARMATEAMVGodToggle) then {
+		ARMATEAMVGodToggle = true;
 		[] spawn {
-			while {adminVGodToggle} do {
+			while {ARMATEAMVGodToggle} do {
 				if ((vehicle player) != player) then {
 					(vehicle player) allowDamage false;
 					(vehicle player) removeAllEventhandlers 'HandleDamage';
@@ -209,26 +205,26 @@ adminVGod = {
 				uiSleep 2;
 			};
 		};
-		systemChat 'AH: Admin Vehicle God Enabled';
+		systemChat 'AT: Vehicle God Enabled';
 	} else {
-		adminVGodToggle = false;
+		ARMATEAMVGodToggle = false;
 		(vehicle player) allowDamage true;
 		(vehicle player) removeAllEventhandlers 'HandleDamage';
 
-		systemChat 'AH: Admin Vehicle God Disabled';
-	};	
-	
+		systemChat 'AT: Vehicle God Disabled';
+	};
+
 };
 
-adminESP = {
-	if (isNil 'adminEspToggle') then {adminEspToggle = false};
-	comment 'ty bantah <3';
+ARMATEAMESP = {
+	if (isNil 'ARMATEAMEspToggle') then {ARMATEAMEspToggle = false};
 
-	if (!adminEspToggle) then {
-		adminEspToggle = true;
-		systemChat 'AH: Admin ESP Enabled';
 
-		admin_esp_eh = addMissionEventHandler ['Draw3D', {
+	if (!ARMATEAMEspToggle) then {
+		ARMATEAMEspToggle = true;
+		systemChat 'AT: ARMATEAM ESP Enabled';
+
+		ARMATEAM_esp_eh = addMissionEventHandler ['Draw3D', {
 			{
 				if (!isNull _x) then {
 					if (vehicle _x != cameraOn) then {
@@ -256,22 +252,22 @@ adminESP = {
 		}];
 
 	} else {
-		adminEspToggle = false;
-		systemChat 'AH: Admin ESP Disabled';
+		ARMATEAMEspToggle = false;
+		systemChat 'AT: ESP Disabled';
 
-		removeMissionEventHandler ['Draw3D', admin_esp_eh];
+		removeMissionEventHandler ['Draw3D', ARMATEAM_esp_eh];
 	};
 };
 
-adminAiESP = {
-	if (isNil 'adminAiEspToggle') then {adminAiEspToggle = false};
-	comment 'ty bantah <3';
+ARMATEAMAiESP = {
+	if (isNil 'ARMATEAMAiEspToggle') then {ARMATEAMAiEspToggle = false};
 
-	if (!adminAiEspToggle) then {
-		adminAiEspToggle = true;
-		systemChat 'AH: Admin AI ESP Enabled';
 
-		admin_ai_esp_eh = addMissionEventHandler ['Draw3D', {
+	if (!ARMATEAMAiEspToggle) then {
+		ARMATEAMAiEspToggle = true;
+		systemChat 'AT: AI ESP Enabled';
+
+		ARMATEAM_ai_esp_eh = addMissionEventHandler ['Draw3D', {
 			{
 				if (!isNull _x && !(isPlayer _x)) then {
 					if (vehicle _x != cameraOn) then {
@@ -299,54 +295,54 @@ adminAiESP = {
 		}];
 
 	} else {
-		adminAiEspToggle = false;
-		systemChat 'AH: Admin AI ESP Disabled';
+		ARMATEAMAiEspToggle = false;
+		systemChat 'AT: AI ESP Disabled';
 
-		removeMissionEventHandler ['Draw3D', admin_ai_esp_eh];
+		removeMissionEventHandler ['Draw3D', ARMATEAM_ai_esp_eh];
 	};
 };
 
-adminBoost = {
-	if (isNil 'adminBoostToggle') then {adminBoostToggle = false};
+ARMATEAMBoost = {
+	if (isNil 'ARMATEAMBoostToggle') then {ARMATEAMBoostToggle = false};
 
-	if (!adminBoostToggle) then {
-		adminBoostToggle = true;
+	if (!ARMATEAMBoostToggle) then {
+		ARMATEAMBoostToggle = true;
 
-		adminBoostEH = (findDisplay 46) displayAddEventHandler['KeyDown', {
+		ARMATEAMBoostEH = (findDisplay 46) displayAddEventHandler['KeyDown', {
 			if (vehicle player == player) exitWith {};
 			if (_this select 4) then {
 				if (isNil 'lastSpeedAdded') then {lastSpeedAdded = 0};
 
-				if (time - lastSpeedAdded > 1) then { 
+				if (time - lastSpeedAdded > 1) then {
 
 					_vehicle = (vehicle player);
 					_vel = velocity _vehicle;
 					_dir = direction _vehicle;
 					_speed = 0.5;
 					_vehicle setVelocity [
-						(_vel select 0) + (sin _dir * _speed), 
-						(_vel select 1) + (cos _dir * _speed), 
+						(_vel select 0) + (sin _dir * _speed),
+						(_vel select 1) + (cos _dir * _speed),
 						(_vel select 2)
 					];
 				};
 			};
 		}];
-		systemChat 'AH: Press ALT for a boost!';
+		systemChat 'AT: Press ALT for a boost!';
 	} else {
-		adminBoostToggle = false;
-		(findDisplay 46) displayRemoveEventHandler['KeyDown', adminBoostEH];
-		systemChat 'AH: Boosting turned off :(';
+		ARMATEAMBoostToggle = false;
+		(findDisplay 46) displayRemoveEventHandler['KeyDown', ARMATEAMBoostEH];
+		systemChat 'AT: Boosting turned off';
 	};
 };
-adminAutoRevive = {
-	if (isNil 'adminReviveToggle') then {adminReviveToggle = false};
+ARMATEAMAutoRevive = {
+	if (isNil 'ARMATEAMReviveToggle') then {ARMATEAMReviveToggle = false};
 
-	if (!adminReviveToggle) then {
-		adminReviveToggle = true;
+	if (!ARMATEAMReviveToggle) then {
+		ARMATEAMReviveToggle = true;
 		[] spawn {
-			while {adminReviveToggle} do {
-				waitUntil {!alive player || !adminReviveToggle};
-				if (!adminReviveToggle) exitWith {};
+			while {ARMATEAMReviveToggle} do {
+				waitUntil {!alive player || !ARMATEAMReviveToggle};
+				if (!ARMATEAMReviveToggle) exitWith {};
 
 				uiSleep 3;
 
@@ -358,26 +354,26 @@ adminAutoRevive = {
 					player setVariable ['Revive',false,true];
 					[profileName] remoteExec ['life_fnc_revived',player];
 				};
-				systemChat 'AH: Revived yourself';
+				systemChat 'AT: Revived yourself';
 				uiSleep 10;
 			};
 		};
-		systemChat 'AH: Enabled auto self revive';
+		systemChat 'AT: Enabled auto self revive';
 	} else {
-		adminReviveToggle = false;
-		systemChat 'AH: Disabled auto self revive';
+		ARMATEAMReviveToggle = false;
+		systemChat 'AT: Disabled auto self revive';
 	};
 };
-adminTP = {
+ARMATEAMTP = {
 	if !('ItemMap' in items player) then {
-		systemChat 'AH: A map was added to your inventory';
+		systemChat 'AT: A map was added to your inventory';
 		player addWeapon 'ItemMap';
 	};
 
-	if (isNil 'adminTpToggle') then {adminTpToggle = false;};
+	if (isNil 'ARMATEAMTpToggle') then {ARMATEAMTpToggle = false;};
 
-	if (!adminTpToggle) then {
-		adminTpToggle = true;
+	if (!ARMATEAMTpToggle) then {
+		ARMATEAMTpToggle = true;
 
 		onMapSingleClick '
 			if (_alt) then {
@@ -385,32 +381,31 @@ adminTP = {
 				openMap[false,false];
 			};
 		';
-		systemChat 'AH: You can now alt+click on your map to teleport';
+		systemChat 'AT: You can now alt+click on your map to teleport';
 	} else {
-		adminTpToggle = false;
-		systemChat 'AH: Map teleport disabled';
+		ARMATEAMTpToggle = false;
+		systemChat 'AT: Map teleport disabled';
 		onMapSingleClick '';
 	};
 };
 
-adminArsenal = {
-	_result = ["Enter Virtual Arsenal? (Tends to have some banny side effects)", "U sure m8?", true, true] call BIS_fnc_guiMessage;
+ARMATEAMArsenal = {
+	_result = ["Enter Virtual Arsenal?", true] call BIS_fnc_guiMessage;
 	if (_result) then {
 		['Open',true] spawn BIS_fnc_arsenal;
 	};
 };
 
-adminDeadMarkers = {
-	if (isNil 'adminDeadMarkersToggle') then {adminDeadMarkersToggle = false};
+ARMATEAMDeadMarkers = {
+	if (isNil 'ARMATEAMDeadMarkersToggle') then {ARMATEAMDeadMarkersToggle = false};
 
-	if (!adminDeadMarkersToggle) then {
-		adminDeadMarkersToggle = true;
+	if (!ARMATEAMDeadMarkersToggle) then {
+		ARMATEAMDeadMarkersToggle = true;
 
 		[] spawn {
-			while {adminDeadMarkersToggle} do {
+			while {ARMATEAMDeadMarkersToggle} do {
 				_deadPeeps = allDeadMen;
 
-				comment 'delete all markers';
 				for '_i' from 0 to (count _deadPeeps)+10 do {
 					deleteMarkerLocal ('deadPlayerMarker' + (str _i));
 				};
@@ -419,7 +414,7 @@ adminDeadMarkers = {
 					_corpse = _deadPeeps select _i;
 					if(!isNull _corpse) then {
 						_marker = createMarkerLocal [('deadPlayerMarker' + (str _i)), getPos _corpse];
-						
+
 						_txt = format['DEAD (%1m)', round (player distance _corpse)];
 						_marker setMarkerColorLocal 'ColorRed';
 						_marker setMarkerTypeLocal 'waypoint';
@@ -434,129 +429,127 @@ adminDeadMarkers = {
 			};
 		};
 
-		systemChat 'AH: Dead Markers Enabled';
+		systemChat 'AT: Dead Markers Enabled';
 	} else {
-		adminDeadMarkersToggle = false;
-		systemChat 'AH: Dead Markers Disabled';
+		ARMATEAMDeadMarkersToggle = false;
+		systemChat 'AT: Dead Markers Disabled';
 	};
 };
 
-adminInfAmmo = {
-	if (isNil 'adminInfAmmoToggle') then {adminInfAmmoToggle = false};
+ARMATEAMInfAmmo = {
+	if (isNil 'ARMATEAMInfAmmoToggle') then {ARMATEAMInfAmmoToggle = false};
 
-	if (!adminInfAmmoToggle) then {
-		adminInfAmmoToggle = true;
+	if (!ARMATEAMInfAmmoToggle) then {
+		ARMATEAMInfAmmoToggle = true;
 
 		[] spawn {
-			while {adminInfAmmoToggle} do {
-				player setAmmo [currentWeapon player, 100000];
-				vehicle player setVehicleAmmo 1;
-				uiSleep 0.1;
+			while {ARMATEAMInfAmmoToggle} do {
+      (vehicle player)setVehicleAmmo 1;
 			};
 		};
 
-		systemChat 'AH: Non-finite ammo enabled';
+		systemChat 'AT: Non-finite ammo enabled';
 	} else {
-		adminInfAmmoToggle = false;
+		ARMATEAMInfAmmoToggle = false;
 
-		systemChat 'AH: Non-finite ammo disabled';
+		systemChat 'AT: Non-finite ammo disabled';
 	};
 };
 
-adminRapidFire = {
-	if (isNil 'adminRapidFireToggle') then {adminRapidFireToggle = false};
+ARMATEAMRapidFire = {
+	if (isNil 'ARMATEAMRapidFireToggle') then {ARMATEAMRapidFireToggle = false};
 
-	if (!adminRapidFireToggle) then {
-		adminRapidFireToggle = true;
+	if (!ARMATEAMRapidFireToggle) then {
+		ARMATEAMRapidFireToggle = true;
 
 		[] spawn {
-			while {adminRapidFireToggle} do {
+			while {ARMATEAMRapidFireToggle} do {
 				(vehicle player) setWeaponReloadingTime [gunner (vehicle player), currentMuzzle (gunner (vehicle player)), 0];
 				uiSleep 0.01;
 			};
 		};
 
-		systemChat 'AH: Rapid fire enabled';
+		systemChat 'AT: Rapid fire enabled';
 	} else {
-		adminRapidFireToggle = false;
+		ARMATEAMRapidFireToggle = false;
 
-		systemChat 'AH: Rapid fire disabled';
+		systemChat 'AT: Rapid fire disabled';
 	};
 };
 
-adminRecoil = {
-	if (isNil 'adminRecoilToggle') then {adminRecoilToggle = false};
+ARMATEAMRecoil = {
+	if (isNil 'ARMATEAMRecoilToggle') then {ARMATEAMRecoilToggle = false};
 
-	if (!adminRecoilToggle) then {
-		adminRecoilToggle = true;
+	if (!ARMATEAMRecoilToggle) then {
+		ARMATEAMRecoilToggle = true;
 
-		adminOldRecoil = unitRecoilCoefficient player;
+		ARMATEAMOldRecoil = unitRecoilCoefficient player;
 		player setUnitRecoilCoefficient 0;
 
-		systemChat 'AH: No recoil enabled';
+		systemChat 'AT: No recoil enabled';
 	} else {
-		adminRecoilToggle = false;
-		player setUnitRecoilCoefficient adminOldRecoil;
+		ARMATEAMRecoilToggle = false;
+		player setUnitRecoilCoefficient ARMATEAMOldRecoil;
 
-		systemChat 'AH: No recoil disabled';
+		systemChat 'AT: No recoil disabled';
 	};
 };
 
-adminSway = {
-	if (isNil 'adminSwayToggle') then {adminSwayToggle = false};
+ARMATEAMSway = {
+	if (isNil 'ARMATEAMSwayToggle') then {ARMATEAMSwayToggle = false};
 
-	if (!adminSwayToggle) then {
-		adminSwayToggle = true;
+	if (!ARMATEAMSwayToggle) then {
+		ARMATEAMSwayToggle = true;
 
 		player setCustomAimCoef 0;
 
-		systemChat 'AH: No sway enabled';
+		systemChat 'AT: No sway enabled';
 	} else {
-		adminSwayToggle = false;
+		ARMATEAMSwayToggle = false;
 		player setCustomAimCoef 1;
 
-		systemChat 'AH: No sway disabled';
+		systemChat 'AT: No sway disabled';
 	};
 };
 
-adminFatigue = {
-	if (isNil 'adminFatigueToggle') then {adminFatigueToggle = false};
+ARMATEAMFatigue = {
+	if (isNil 'ARMATEAMFatigueToggle') then {ARMATEAMFatigueToggle = false};
 
-	if (!adminFatigueToggle) then {
-		adminFatigueToggle = true;
+	if (!ARMATEAMFatigueToggle) then {
+		ARMATEAMFatigueToggle = true;
 
 		[] spawn {
-			while {adminFatigueToggle} do {
+			while {ARMATEAMFatigueToggle} do {
 				player setFatigue 0;
 				uiSleep 0.5;
 			};
 		};
 
-		systemChat 'AH: No fatigue enabled';
+		systemChat 'AT: No fatigue enabled';
 	} else {
-		adminFatigueToggle = false;
+		ARMATEAMFatigueToggle = false;
 
-		systemChat 'AH: No fatigue disabled';
+		systemChat 'AT: No fatigue disabled';
 	};
 };
 
-adminMarkers = {
-	if (isNil 'adminMarkersToggle') then {adminMarkersToggle = false};
+ARMATEAMMarkers = {
+	if (isNil 'ARMATEAMMarkersToggle') then {ARMATEAMMarkersToggle = false};
 
-	if (!adminMarkersToggle) then {
-		adminMarkersToggle = true;
+	if (!ARMATEAMMarkersToggle) then {
+		ARMATEAMMarkersToggle = true;
 
 		[] spawn {
 			_i = 0;
 			_markers = [];
-			while {adminMarkersToggle} do {
+			while {ARMATEAMMarkersToggle} do {
 				{
 					if (_x != player) then {
 
-						
+
 						_name = str (vehicle _x);
 
-						if (getMarkerColor _name == "") then { 
+						if (getMarkerColor _name == "") then {
 							_marker = createMarkerLocal[_name, position (vehicle _x)];
 							_marker setMarkerTypeLocal "mil_triangle";
 
@@ -626,14 +619,14 @@ adminMarkers = {
 		};
 
 
-		systemChat 'AH: Player Markers Enabled';
+		systemChat 'AT: Player Markers Enabled';
 	} else {
-		adminMarkersToggle = false;
-		systemChat 'AH: Player Markers Disabled';
+		ARMATEAMMarkersToggle = false;
+		systemChat 'AT: Player Markers Disabled';
 	};
 };
 
-adminHeal = {
+ARMATEAMHeal = {
 	params["_target"];
 	vehicle _target setDamage 0;
 	_target setDamage 0;
@@ -648,15 +641,15 @@ adminHeal = {
 	systemChat format['Healed %1', name _target];
 };
 
-adminFly = {
-	if (isNil 'adminFlyToggle') then {adminFlyToggle = false};
+ARMATEAMFly = {
+	if (isNil 'ARMATEAMFlyToggle') then {ARMATEAMFlyToggle = false};
 
-	if (!adminFlyToggle) then {
-		adminFlyToggle = true;
+	if (!ARMATEAMFlyToggle) then {
+		ARMATEAMFlyToggle = true;
 		player allowDamage false;
 
 		[] spawn {
-			while{adminFlyToggle} do {
+			while{ARMATEAMFlyToggle} do {
 				player playActionNow 'PlayerStand';
 				_dir = eyeDirection player;
 				if(currentWeapon player != '') then {
@@ -667,55 +660,55 @@ adminFly = {
 			uiSleep 1;
 			player allowDamage true;
 		};
-		systemChat 'AH: Fly mode enabled';
+		systemChat 'AT: Fly mode enabled';
 	} else {
-		adminFlyToggle = false;
-		systemChat 'AH: Fly mode disabled';
+		ARMATEAMFlyToggle = false;
+		systemChat 'AT: Fly mode disabled';
 	};
 };
 
-adminSpeed = {
-	if (isNil 'adminSpeedToggle') then {adminSpeedToggle = false};
+ARMATEAMSpeed = {
+	if (isNil 'ARMATEAMSpeedToggle') then {ARMATEAMSpeedToggle = false};
 
-	if(!adminSpeedToggle) then {
-		adminSpeedToggle = true;
+	if(!ARMATEAMSpeedToggle) then {
+		ARMATEAMSpeedToggle = true;
 		player setAnimSpeedCoef 8;
 
-		systemChat 'AH: Ye boii, feeling fast';
+		systemChat 'AT: Speed Hack Enabled';
 
 	} else {
-		adminSpeedToggle = false;
+		ARMATEAMSpeedToggle = false;
 		player setAnimSpeedCoef 1;
 
-		systemChat 'AH: Admin speed disabled';
+		systemChat 'AT: Speed Hack Disabled';
 	};
 };
 
-adminNoGrass = {
-	if (isNil 'adminGrassToggle') then {adminGrassToggle = false};
+ARMATEAMNoGrass = {
+	if (isNil 'ARMATEAMGrassToggle') then {ARMATEAMGrassToggle = false};
 
-	if (!adminGrassToggle) then {
-		adminGrassToggle = true;
+	if (!ARMATEAMGrassToggle) then {
+		ARMATEAMGrassToggle = true;
 		setTerrainGrid 50;
-		systemChat 'AH: Grass Disabled';
+		systemChat 'AT: Grass Disabled';
 	} else {
-		adminGrassToggle = false;
+		ARMATEAMGrassToggle = false;
 		setTerrainGrid 25;
-		systemChat 'AH: Grass Enabled';
+		systemChat 'AT: Grass Enabled';
 	};
 };
 
-adminGiveAmmo = {
+ARMATEAMGiveAmmo = {
 	_item = currentWeapon player;
 	_mags = getArray(configFile >> 'CfgWeapons' >> _item >> 'magazines');
 	_mag = _mags select 0;
-	
+
 	player addMagazine _mag;
 	player addMagazine _mag;
-	systemChat 'AH: Spawned 2 mags';
+	systemChat 'AT: Spawned 2 mags';
 };
 
-adminRainbow = {
+ARMATEAMRainbow = {
 	_material =  'A3\characters_f_bootcamp\Data\VR_Soldier_F.rvmat';
 	_texture = 'a3\data_f\rainbow_ca.paa';
 	_vehicle = (vehicle player);
@@ -725,22 +718,22 @@ adminRainbow = {
 		_vehicle setObjectMaterialGlobal [_i,_material];
 	};
 
-	systemChat 'AH: Danking reel hard';
+	systemChat 'AT: Rainbow Enabled';
 };
 
-adminListNear = {
-	
-	if(isNil "adminListNearToggle") then {adminListNearToggle = false};
+ARMATEAMListNear = {
 
-	if (!adminListNearToggle) then {
-		adminListNearToggle = true;
-		systemChat 'AH: Enabled Near Player Display';
+	if(isNil "ARMATEAMListNearToggle") then {ARMATEAMListNearToggle = false};
+
+	if (!ARMATEAMListNearToggle) then {
+		ARMATEAMListNearToggle = true;
+		systemChat 'AT: Enabled Near Player Display';
 
 		[] spawn {
 			_ents = [allUnits, [], {_x distance player}, "ASCEND", {_x distance player < 200 && _x != player}] call BIS_fnc_sortBy;
 			_count = 0;
 
-			while{adminListNearToggle} do {
+			while{ARMATEAMListNearToggle} do {
 				_arr = [];
 
 				{
@@ -774,14 +767,14 @@ adminListNear = {
 				uiSleep 0.1;
 			};
 		};
-		
+
 	} else {
-		adminListNearToggle = false;
-		systemChat 'AH: Disabled Near Player Display';
+		ARMATEAMListNearToggle = false;
+		systemChat 'AT: Disabled Near Player Display';
 	};
 };
 
-adminReviveNear = {
+ARMATEAMReviveNear = {
 	_names = [];
 	{
 		if ((player distance _x) < 50) then {
@@ -796,10 +789,10 @@ adminReviveNear = {
 				};
 
 			_names pushBackUnique (name _x);
-		};	
+		};
 	} foreach allDeadMen;
 
-	systemChat format['AH: Revived: %1', (_names joinString ', ')];
+	systemChat format['AT: Revived: %1', (_names joinString ', ')];
 };
 
 viewKeybinds = {
@@ -817,18 +810,18 @@ viewKeybinds = {
 filterSpawnMenu = {
 	params['_input'];
 	if (_input == '') exitWith {
-		[AdminSpawnType] call fillSpawnMenu;
+		[ARMATEAMSpawnType] call fillSpawnMenu;
 	};
 
 	_arr = [];
-	if (AdminSpawnType == 'weapon') then {
+	if (ARMATEAMSpawnType == 'weapon') then {
 		_arr = AllWeapons;
 	};
 
-	if (AdminSpawnType == 'vehicle') then {
+	if (ARMATEAMSpawnType == 'vehicle') then {
 		_arr = AllVehicles;
 	};
-	
+
 	_output = [];
 	{
 		_text = _x select 0;
@@ -840,9 +833,9 @@ filterSpawnMenu = {
 				_output pushBackUnique _x;
 			};
 		}
-	} foreach _arr;					
+	} foreach _arr;
 
-	[AdminSpawnType, _output, true] call fillSpawnMenu;
+	[ARMATEAMSpawnType, _output, true] call fillSpawnMenu;
 
 };
 
@@ -857,17 +850,17 @@ fillSpawnMenu = {
 
 		if (_type == 'weapons' || _type == 'weapon') then {
 			_arr = AllWeapons;
-			AdminSpawnType = 'weapon';
+			ARMATEAMSpawnType = 'weapon';
 		};
 
 		if (_type == 'vehicles' || _type == 'vehicle') then {
 			_arr = AllVehicles;
-			AdminSpawnType = 'vehicle';
+			ARMATEAMSpawnType = 'vehicle';
 		};
 	} else {
 		_arr = _input;
 	};
-	
+
 	for '_i' from 0 to (count _arr)-1 do {
 		_s = _arr select _i;
 		_text = _s select 2;
@@ -884,10 +877,10 @@ fillPlayerList = {
 	params['_units'];
 	_playerList = uiNamespace getVariable 'playerList';
 	_targetList = uiNamespace getVariable 'target_display';
-	_admins = [getPlayerUID player];
+	_ARMATEAMs = [getPlayerUID player];
 	_normies = [];
 
-	_adminObjs = [];
+	_ARMATEAMObjs = [];
 	_playerObjs = [];
 	_aiObjs = [];
 
@@ -900,9 +893,9 @@ fillPlayerList = {
 			};
 		} else {
 			_uid = getPlayerUID _x;
-			if (_uid in _admins) then {
+			if (_uid in _ARMATEAMs) then {
 				if (!(_uid in _normies)) then {
-					_adminObjs pushBackUnique _x;
+					_ARMATEAMObjs pushBackUnique _x;
 				} else {
 					_playerObjs pushBackUnique _x;
 				};
@@ -914,20 +907,20 @@ fillPlayerList = {
 
 	if (!sortByName) then {
 		reverse _playerObjs;
-		reverse _adminObjs;
+		reverse _ARMATEAMObjs;
 	} else {
 		_playerObjs sort true;
-		_adminObjs sort true;
+		_ARMATEAMObjs sort true;
 		_aiObjs sort true;
 	};
 
 	lbClear _playerList;
 	lbClear _targetList;
 
-	_playerList lbAdd '---Admins---';
+	_playerList lbAdd '---You---';
 	_playerList lbSetColor [(lbSize 10002)-1,[0.6,1,0.4,1]];
 
-	{	
+	{
 		_playerList lbAdd format['%1',name _x];
 
 		_weapon = currentWeapon _x;
@@ -937,10 +930,10 @@ fillPlayerList = {
 				_weapon = secondaryWeapon _x;
 			};
 		};
-		
+
 		_playerList lbSetPicture [(lbSize 10002)-1, (getText (configFile >> 'CfgWeapons' >> _weapon >> 'picture'))];
-	
-	} foreach _adminObjs;
+
+	} foreach _ARMATEAMObjs;
 
 	_playerList lbAdd '';
 	_playerList lbAdd '---Players---';
@@ -974,7 +967,7 @@ fillPlayerList = {
 					};
 				};
 			};
-			
+
 			if (_weapon == '') then {
 				_playerList lbSetPicture [(lbSize 10002)-1, _flag];
 			} else {
@@ -994,11 +987,11 @@ fillPlayerList = {
 				_playerList lbSetPicture [(lbSize 10002)-1, (getText (configFile >> 'cfgVehicles' >> typeOf (vehicle _x) >> 'picture'))];
 			} forEach crew _x;
 		};
-		
+
 	} foreach _playerObjs;
 
 
-	if (AdminListAis && (count _aiObjs) > 0) then {
+	if (ARMATEAMListAis && (count _aiObjs) > 0) then {
 		_playerList lbAdd '';
 		_playerList lbAdd '---AI---';
 		_playerList lbSetColor [(lbSize 10002)-1,[0.502,0.502,1,1]];
@@ -1033,7 +1026,7 @@ fillPlayerList = {
 						};
 					};
 				};
-				
+
 				if (_weapon == '') then {
 					_playerList lbSetPicture [(lbSize 10002)-1, _flag];
 				} else {
@@ -1050,7 +1043,7 @@ fillPlayerList = {
 copyPlayerLoadout = {
 	_selectedPlayer = (lbCurSel 10002);
 	if (_selectedPlayer == -1) exitWith {
-		systemChat 'AH: Gotta select a player first';
+		systemChat 'AT: Gotta select a player first';
 	};
 	_playerName = lbText [10002,_selectedPlayer];
 	_playerObj = objNull;
@@ -1061,14 +1054,14 @@ copyPlayerLoadout = {
 	} foreach allPlayers;
 
 	if (isNull _playerObj) exitWith {
-		systemChat 'AH: Invalid player selected';
+		systemChat 'AT: Invalid player selected';
 	};
 
 	_edit = (findDisplay 999) displayCtrl 10004;
 	_name = ctrlText _edit;
 
 	if (_name == '') exitWith {
-		systemChat 'AH: Gotta give the loadout a name';
+		systemChat 'AT: Gotta give the loadout a name';
 	};
 
 	_loadouts = profileNamespace getVariable['ah_loadouts', []];
@@ -1076,7 +1069,7 @@ copyPlayerLoadout = {
 	profileNamespace setVariable ['ah_loadouts', _loadouts];
 	saveProfileNamespace;
 
-	systemChat 'AH: Loadout saved!';
+	systemChat 'AT: Loadout saved!';
 };
 
 handleLoadoutSelection = {
@@ -1095,7 +1088,7 @@ handleLoadoutSelection = {
 getLoadout = {
 	params['_name', '_loadouts'];
 	_ret = [];
-	
+
 	{
 		if ((_x select 0) == _name) then {
 			_ret = _x;
@@ -1123,7 +1116,7 @@ handleVariableSelection = {
 
 	_selected = lbCurSel _menu;
 	_option = _menu lbText _selected;
-	
+
 	if (_option == "Display Value (hint)") exitWith {
 		if (count(str _value) > 2500) then {
 			_arr = toArray (str _value);
@@ -1177,11 +1170,11 @@ handleVariableSelection = {
 		};
 
 		if (isNil '_newVal') exitWith {
-			systemChat ('AH: Unsupported type: ' + _type);
+			systemChat ('AT: Unsupported type: ' + _type);
 		};
-		
+
 		missionNamespace setVariable [_name, _newVal];
-		systemChat 'AH: Variable set successfully';
+		systemChat 'AT: Variable set successfully';
 	};
 };
 
@@ -1249,7 +1242,7 @@ fillLoadoutSubMenu = {
 
 		{
 			_menu lbAdd _x;
-		} foreach _options;	
+		} foreach _options;
 
 		_menu ctrlRemoveAllEventHandlers 'LBDblClick';
 		_menu ctrlAddEventHandler ['LBDblClick','[lbText [10011,(lbCurSel 10011)]] call fillLoadoutSubMenu;'];
@@ -1260,30 +1253,30 @@ fillLoadoutSubMenu = {
 	_selId = lbCurSel 10002;
 	_selText = lbText [10002,_selId];
 
-	switch (_value) do { 
-		case 'Save current loadout' : { 
+	switch (_value) do {
+		case 'Save current loadout' : {
 			_edit = (findDisplay 999) displayCtrl 10004;
 			_name = ctrlText _edit;
 
 			if (_name == '') exitWith {
-				systemChat 'AH: U dumb man, loadout name cant be empty af!';
+				systemChat 'AT: Loadout name cant be empty, give it a name and try agian';
 			};
 
 			_loadout = getUnitLoadout player;
 			_loadouts = _loadouts + [[_name, _loadout]];
 
-			systemChat format['AH: Saving %1', _name];
+			systemChat format['AT: Saving %1', _name];
 
 			profileNamespace setVariable ['ah_loadouts', _loadouts];
 			saveProfileNamespace;
-		}; 
+		};
 		case 'Load selected loadout' : {
 			if (_selText == '') exitWith {};
 			_loadout = [_selText, _loadouts] call getLoadout;
 			player setUnitLoadout (_loadout select 1);
 
 		};
-		case 'Override selected loadout' : { 
+		case 'Override selected loadout' : {
 			if (_selText == '') exitWith {};
 
 			{
@@ -1295,15 +1288,15 @@ fillLoadoutSubMenu = {
 					saveProfileNamespace;
 				};
 			} foreach _loadouts;
-		}; 
-		case 'Duplicate selected loadout' : { 
+		};
+		case 'Duplicate selected loadout' : {
 			if (_selText == '') exitWith {};
 
 			_edit = (findDisplay 999) displayCtrl 10004;
 			_name = ctrlText _edit;
 
 			if (_name == '') exitWith {
-				systemChat 'AH: U dumb man, loadout name cant be empty af!';
+				systemChat 'AT: Loadout name cant be empty, give it a name and try agian ';
 			};
 
 			_loadout = [_selText, _loadouts] call getLoadout;
@@ -1311,27 +1304,27 @@ fillLoadoutSubMenu = {
 			profileNamespace setVariable ['ah_loadouts', _loadouts];
 			saveProfileNamespace;
 		};
-		case 'Delete selected loadout' : { 
+		case 'Delete selected loadout' : {
 			if (_selText == '') exitWith {};
 
 			{
 				_name = _x select 0;
 				if (_name == _selText) exitWith {
-					systemChat format['AH: Deleted %1', _name];
+					systemChat format['AT: Deleted %1', _name];
 
 					_loadouts deleteAt _forEachIndex;
 					profileNamespace setVariable ['ah_loadouts', _loadouts];
 					saveProfileNamespace;
 				};
 			} foreach _loadouts;
-		}; 
+		};
 		case 'Delete all loadouts' : {
-			systemChat 'AH: Clearning loadouts';
+			systemChat 'AT: Clearning loadouts';
 			profileNamespace setVariable ['ah_loadouts', []];
 			saveProfileNamespace;
 		};
 
-		default {}; 
+		default {};
 	};
 	call fillLoadouts;
 
@@ -1344,7 +1337,7 @@ fillLoadouts = {
 	lbClear _list;
 
 	_loadouts = profileNamespace getVariable['ah_loadouts', []];
-	
+
 	{
 		_name = _x select 0;
 		_list lbAdd _name;
@@ -1379,72 +1372,72 @@ filterList = {
 };
 
 
-handleAdminSpawn = {
+handleARMATEAMSpawn = {
 	params['_index'];
 	_list = uiNamespace getVariable 'secondList';
 	_item = _list lbData _index;
 
-	if (AdminSpawnType == 'weapon') exitWith {
+	if (ARMATEAMSpawnType == 'weapon') exitWith {
 
-		systemChat format['AH: Spawning %1', _item];
+		systemChat format['AT: Spawning %1', _item];
 		player addWeapon _item;
 
 		_mags = getArray(configFile >> 'CfgWeapons' >> _item >> 'magazines');
 		_mag = _mags select 0;
-		
+
 		player addMagazine _mag;
 		player addMagazine _mag;
 	};
 
-	if (AdminSpawnType == 'vehicle') exitWith {
+	if (ARMATEAMSpawnType == 'vehicle') exitWith {
 
 		[_item] spawn {
 			params['_type'];
-			adminSpawnType = _type;
+			ARMATEAMSpawnType = _type;
 
-			adminSpawnTmp = _type createVehicleLocal (position player);
+			ARMATEAMSpawnTmp = _type createVehicleLocal (position player);
 
-			_bbr = boundingBoxReal adminSpawnTmp;
+			_bbr = boundingBoxReal ARMATEAMSpawnTmp;
 			_p1 = _bbr select 0;
 			_p2 = _bbr select 1;
 			_maxLength = abs ((_p2 select 1) - (_p1 select 1));
 			_maxHeight = abs ((_p2 select 2) - (_p1 select 2));
 
-			adminSpawnTmp attachTo [player, [0, _maxLength, _maxHeight / 2]];
+			ARMATEAMSpawnTmp attachTo [player, [0, _maxLength, _maxHeight / 2]];
 
 			vehicleSpawnEH = (findDisplay 46) displayAddEventHandler['KeyUp', {
 				if (_this select 1 == 0x39) then {
-					_pos = getPos adminSpawnTmp;
+					_pos = getPos ARMATEAMSpawnTmp;
 
-					_class = adminSpawnType;
+					_class = ARMATEAMSpawnType;
 					_pos set[2, 500];
-					_dir = getDir adminSpawnTmp;
+					_dir = getDir ARMATEAMSpawnTmp;
 					_v = createVehicle[_class, _pos, [], 0, 'CAN_COLLIDE'];
 
-					deleteVehicle adminSpawnTmp;
+					deleteVehicle ARMATEAMSpawnTmp;
 
 					_pos set[2, 1];
 					_v setPosATL _pos;
 					_v setDir _dir;
 
-					
+
 					(findDisplay 46) displayRemoveEventHandler['KeyUp', vehicleSpawnEH];
 
-					systemChat format['AH: Spawning %1', adminSpawnType];
+					systemChat format['AT: Spawning %1', ARMATEAMSpawnType];
 				} else {
 					if (_this select 1 == 0x3B) then {
-						deleteVehicle adminSpawnTmp;
+						deleteVehicle ARMATEAMSpawnTmp;
 						(findDisplay 46) displayRemoveEventHandler['KeyUp', vehicleSpawnEH];
 					};
 				};
 			}];
 		};
 	};
-	systemChat 'AH: Spawn error, spawn type not defined';
+	systemChat 'AT: Spawn error, spawn type not defined';
 };
 
-	
-handleAdminFuncs = {
+
+handleARMATEAMFuncs = {
 	params['_selected'];
 
 	if !(_selected in toggleFuncs) then {
@@ -1459,32 +1452,32 @@ handleAdminFuncs = {
 		case '---View Loadouts---': {call fillLoadouts;};
 		case '---Variable Viewer---': {[''] call variableViewer;};
 		case '---View Players---': {[allUnits] call fillPlayerList;};
-		case 'God Mode': {call showAdminMenu; call adminGod;};
-		case 'Vehicle God Mode': {call showAdminMenu; call adminVGod;};
-		case 'Auto Revive': {call showAdminMenu; call adminAutoRevive;};
-		case 'ESP': {call showAdminMenu; call adminESP;};
-		case 'AI ESP': {call showAdminMenu; call adminAiESP;};
-		case 'Map Markers': {call showAdminMenu; call adminMarkers;};
-		case 'Dead Markers': {call showAdminMenu; call adminDeadMarkers;};
-		case 'Non-finite Ammo': {call showAdminMenu; call adminInfAmmo;};
-		case 'Rapid Fire': {call showAdminMenu; call adminRapidFire;};
-		case 'No Recoil': {call showAdminMenu; call adminRecoil;};
-		case 'No Sway': {call showAdminMenu; call adminSway;};
-		case 'No Fatigue': {call showAdminMenu; call adminFatigue;};
-		case 'Snorting Speed': {call showAdminMenu; call adminSpeed;};
-		case 'Fly mode': {call showAdminMenu; call adminFly;};
-		case 'Vehicle Boost': {call showAdminMenu; call adminBoost;};
-		case 'Map Teleport': {call showAdminMenu; call adminTP};
-		case 'No Grass': {call showAdminMenu; call adminNoGrass;};
-		case 'Display near Players': {call adminListNear; call showAdminMenu;};
-		case 'Sort Player by Name': {sortByName = !sortByName; call showAdminMenu;};
-		case 'List AIs': {AdminListAis = !AdminListAis; call showAdminMenu;};
+		case 'God Mode': {call showARMATEAMMenu; call ARMATEAMGod;};
+		case 'Vehicle God Mode': {call showARMATEAMMenu; call ARMATEAMVGod;};
+		case 'Auto Revive': {call showARMATEAMMenu; call ARMATEAMAutoRevive;};
+		case 'ESP': {call showARMATEAMMenu; call ARMATEAMESP;};
+		case 'AI ESP': {call showARMATEAMMenu; call ARMATEAMAiESP;};
+		case 'Map Markers': {call showARMATEAMMenu; call ARMATEAMMarkers;};
+		case 'Dead Markers': {call showARMATEAMMenu; call ARMATEAMDeadMarkers;};
+		case 'Unlimited Ammo': {call showARMATEAMMenu; call ARMATEAMInfAmmo;};
+		case 'Rapid Fire': {call showARMATEAMMenu; call ARMATEAMRapidFire;};
+		case 'No Recoil': {call showARMATEAMMenu; call ARMATEAMRecoil;};
+		case 'No Sway': {call showARMATEAMMenu; call ARMATEAMSway;};
+		case 'No Fatigue': {call showARMATEAMMenu; call ARMATEAMFatigue;};
+		case 'Speed Hack': {call showARMATEAMMenu; call ARMATEAMSpeed;};
+		case 'Fly mode': {call showARMATEAMMenu; call ARMATEAMFly;};
+		case 'Vehicle Boost': {call showARMATEAMMenu; call ARMATEAMBoost;};
+		case 'Map Teleport': {call showARMATEAMMenu; call ARMATEAMTP};
+		case 'No Grass': {call showARMATEAMMenu; call ARMATEAMNoGrass;};
+		case 'Display near Players': {call ARMATEAMListNear; call showARMATEAMMenu;};
+		case 'Sort Player by Name': {sortByName = !sortByName; call showARMATEAMMenu;};
+		case 'List AIs': {ARMATEAMListAis = !ARMATEAMListAis; call showARMATEAMMenu;};
 		case 'Copy Players Loadout': {call copyPlayerLoadout};
-		case 'FreeCams(.com)': {closeDialog 0; [] call bis_fnc_camera;};
-		case 'Virtual Arsenal': { closeDialog 0; [] spawn adminArsenal;};
-		case 'Revive Near Players': { call adminReviveNear; };
-		case 'Give Ammo': { [] call adminGiveAmmo; };
-		case 'Rainbow Vehicle': { [] call adminRainbow; };
+		case 'Free Cam': {closeDialog 0; [] call bis_fnc_camera;};
+		case 'Virtual Arsenal': { closeDialog 0; [] spawn ARMATEAMArsenal;};
+		case 'Revive Near Players': { call ARMATEAMReviveNear; };
+		case 'Give Ammo': { [] call ARMATEAMGiveAmmo; };
+		case 'Rainbow Vehicle': { [] call ARMATEAMRainbow; };
 		case 'View Keybinds': { [] call viewKeybinds; };
 
 		comment 'life';
@@ -1512,7 +1505,7 @@ handlePlayerActions = {
 		case 'Teleport target to me' : {
 			currentTarget setPos (getPos (vehicle player));
 			systemChat format['Teleported %1 to me', name currentTarget];
-		}; 
+		};
 		case 'Move into target vehicle' : {
 			player action['GetInCargo', vehicle currentTarget];
 			systemChat format['Got in %1 vehicle', name currentTarget];
@@ -1541,25 +1534,25 @@ handlePlayerActions = {
 		default {};
 	};
 
-	switch (_option) do { 
+	switch (_option) do {
 		case 'Kill' : {
 			currentTarget setDamage 1;
 			systemChat format['Killed %1', name currentTarget];
-		}; 
+		};
 
 		case 'Restrain' : {
 			currentTarget setVariable['restrained',true,true];
 			[currentTarget]remoteExec['life_fnc_restrain',currentTarget];
 
 			systemChat format['Restrained %1', name currentTarget];
-		}; 
+		};
 		case 'Jail' : {
 
 			currentTarget setPos (getMarkerPos 'jail_marker');
 			[currentTarget] remoteExecCall ['life_fnc_jailSys',2];
 
 			systemChat format['Jailed %1', name currentTarget];
-		}; 
+		};
 		case 'Zeus' : {
 
 			[] spawn {
@@ -1572,14 +1565,14 @@ handlePlayerActions = {
 			};
 
 			systemChat format['Zeused %1', name currentTarget];
-		}; 
+		};
 		case 'Eject' : {
 			currentTarget action['Eject', vehicle currentTarget];
 			systemChat format['Ejected %1', name currentTarget];
 		};
 		case 'Heal' : {
-			[currentTarget] call adminHeal;
-		}; 
+			[currentTarget] call ARMATEAMHeal;
+		};
 		case 'Revive' : {
 			if (getPlayerUID currentTarget == '') exitWith {
 				systemChat 'Unable to revived, player already left';
@@ -1595,11 +1588,11 @@ handlePlayerActions = {
 			};
 
 			systemChat format['Revived %1', name currentTarget];
-		}; 
+		};
 		case 'Teleport to' : {
 			vehicle player setPos (position currentTarget);
 			systemChat format['Teleported to %1', (name currentTarget)];
-		}; 
+		};
 		case 'Spectate' : {
 			currentTarget switchCamera 'EXTERNAL';
 			_msg = format['Spectating %1 - Press F1 to cancel', name currentTarget];
@@ -1608,7 +1601,7 @@ handlePlayerActions = {
 
 			(findDisplay 46) displayAddEventHandler['KeyDown','if (_this select 1 == 0x3B) then { vehicle player switchCamera ''EXTERNAL'' };'];
 		};
-		
+
 		case 'Unrestrain' : {
 			currentTarget setVariable['restrained',false,true];
 			systemChat format['Unrestrained %1', name currentTarget];
@@ -1620,7 +1613,7 @@ handlePlayerActions = {
 			systemChat format['Freed %1', name currentTarget];
 		};
 
-		default {}; 
+		default {};
 	};
 };
 
@@ -1639,33 +1632,33 @@ handlePlayerSelection = {
 	};
 
 	currentTarget = _target;
-	
+
 	_options = [];
 
-	_options = [_options, ['Kill %1', 'red'], true] call addToAdminList;
-	_options = [_options, ['Restrain %1', 'red'], true] call addToAdminList;
+	_options = [_options, ['Kill %1', 'red'], true] call addToARMATEAMList;
+	_options = [_options, ['Restrain %1', 'red'], true] call addToARMATEAMList;
 	if (isModLife) then {
-		_options = [_options, ['Jail %1', 'red'], true] call addToAdminList;
+		_options = [_options, ['Jail %1', 'red'], true] call addToARMATEAMList;
 	};
-	_options = [_options, ['Zeus %1', 'red'], true] call addToAdminList;
-	_options = [_options, ['Eject %1', 'red'], false] call addToAdminList;
+	_options = [_options, ['Zeus %1', 'red'], true] call addToARMATEAMList;
+	_options = [_options, ['Eject %1', 'red'], false] call addToARMATEAMList;
 
-	_options = [_options, ['', 'spacer'], false] call addToAdminList;
+	_options = [_options, ['', 'spacer'], false] call addToARMATEAMList;
 
-	_options = [_options, ['Heal %1', 'green'], true] call addToAdminList;
-	_options = [_options, ['Revive %1', 'green'], true] call addToAdminList;
-	_options = [_options, ['Teleport to %1', 'green'], true] call addToAdminList;
-	_options = [_options, ['Teleport target to me', 'green'], false] call addToAdminList;
-	_options = [_options, ['Spectate %1', 'green'], true] call addToAdminList;
+	_options = [_options, ['Heal %1', 'green'], true] call addToARMATEAMList;
+	_options = [_options, ['Revive %1', 'green'], true] call addToARMATEAMList;
+	_options = [_options, ['Teleport to %1', 'green'], true] call addToARMATEAMList;
+	_options = [_options, ['Teleport target to me', 'green'], false] call addToARMATEAMList;
+	_options = [_options, ['Spectate %1', 'green'], true] call addToARMATEAMList;
 	if (isModLife) then {
-		_options = [_options, ['Unrestrain %1', 'green'], true] call addToAdminList;
-		_options = [_options, ['Free %1', 'green'], true] call addToAdminList;
+		_options = [_options, ['Unrestrain %1', 'green'], true] call addToARMATEAMList;
+		_options = [_options, ['Free %1', 'green'], true] call addToARMATEAMList;
 	};
-	_options = [_options, ['Lock/Unlock target vehicle', 'green'], false] call addToAdminList;
-	_options = [_options, ['Move into target vehicle', 'green'], false] call addToAdminList;
-	_options = [_options, ['Move target into your vehicle', 'green'], false] call addToAdminList;
-		
-	_options = [_options, ['', 'spacer'], false] call addToAdminList;
+	_options = [_options, ['Lock/Unlock target vehicle', 'green'], false] call addToARMATEAMList;
+	_options = [_options, ['Move into target vehicle', 'green'], false] call addToARMATEAMList;
+	_options = [_options, ['Move target into your vehicle', 'green'], false] call addToARMATEAMList;
+
+	_options = [_options, ['', 'spacer'], false] call addToARMATEAMList;
 
 	_tmp = _options;
 	_options = [];
@@ -1680,7 +1673,7 @@ handlePlayerSelection = {
 	_options = _options + [[format['UID: %1', getPlayerUID _target], 'spacer']];
 	_options = _options + [[format['Position: %1', mapGridPosition _target], 'spacer']];
 	_options = _options + [[format['Health: %1', round (100 - ((damage _target) * 100))], 'spacer']];
-	
+
 
 	_menu = (uiNamespace getVariable 'target_display');
 	lbClear _menu;
@@ -1694,15 +1687,15 @@ handlePlayerSelection = {
 
 		_menu lbAdd _txt;
 		if (_color == 'green') then {
-			_menu lbSetColor [_i,[0,0.7,0.8,1]]; 
+			_menu lbSetColor [_i,[0,0.7,0.8,1]];
 		};
 		if (_color == 'red') then {
-			_menu lbSetColor [_i,[0.8,0.4,0.4,1]]; 
+			_menu lbSetColor [_i,[0.8,0.4,0.4,1]];
 		};
 		if (_color == 'spacer') then {
-			_menu lbSetColor [_i,[0.8,0.9,0.8,1]]; 
+			_menu lbSetColor [_i,[0.8,0.9,0.8,1]];
 		};
-		
+
 	};
 
 	_menu ctrlRemoveAllEventHandlers 'LBDblClick';
@@ -1710,7 +1703,7 @@ handlePlayerSelection = {
 };
 
 formatTopBar = {
-	_topText = format['<t size=''1'' align=''left''>Admin Cheat (oops, i mean menu...) - Online players: %1 - Uptime: %2</t>', str (count allPlayers), call AH_TimeStr];
+	_topText = format['<t size=''1'' align=''left''>Arma.Team Centaurus Menu - Online players: %1 - Uptime: %2</t>', str (count allPlayers), call AH_TimeStr];
 	_bar = uiNamespace getVariable 'topBar';
 	_bar ctrlSetStructuredText parseText _topText;
 };
@@ -1723,8 +1716,8 @@ createBg = {
 };
 
 
-showAdminMenu = {
-	_adminMenu = [];
+showARMATEAMMenu = {
+	_ARMATEAMMenu = [];
 	if (isNil 'toggleFuncs') then {toggleFuncs = [];};
 
 	disableSerialization;
@@ -1786,7 +1779,7 @@ showAdminMenu = {
 			_c = ctrlText _edit;
 			call compile _c;
 		';
-		
+
 
 
 		_abortBtn = _display ctrlCreate ['RscButtonMenuOk', 10008];
@@ -1800,14 +1793,14 @@ showAdminMenu = {
 		_filterEdit ctrlSetPosition [0.0875,1.28,0.45,0.04];
 		_filterEdit ctrlSetBackgroundColor [0,0,0,0.6];
 		_filterEdit ctrlCommit 0;
-		_filterEdit ctrlRemoveAllEventHandlers 'keyUp'; 
+		_filterEdit ctrlRemoveAllEventHandlers 'keyUp';
 		_filterEdit ctrlAddEventHandler['keyUp', '[ctrlText 10009] call filterList;'];
 
 		_filterItem = _display ctrlCreate ['RscEdit', 10013];
 		_filterItem ctrlSetPosition [1.1625,1.28,0.5375,0.04];
 		_filterItem ctrlSetBackgroundColor [0,0,0,0.6];
 		_filterItem ctrlCommit 0;
-		_filterItem ctrlRemoveAllEventHandlers 'keyUp'; 
+		_filterItem ctrlRemoveAllEventHandlers 'keyUp';
 		_filterItem ctrlAddEventHandler['keyUp', '[ctrlText 10013] call filterSpawnMenu;'];
 
 
@@ -1818,7 +1811,7 @@ showAdminMenu = {
 		ctrlMapAnimClear _mapCtrl;
 		_mapCtrl ctrlMapAnimAdd [0, 0.05, getPos player];
 		ctrlMapAnimCommit _mapCtrl;
-		
+
 
 		[0.55,-0.32,0.6,0.86] call createBg;
 		uiNamespace setVariable['target_display',_display ctrlCreate ['RscListBox', 10011]];
@@ -1829,7 +1822,7 @@ showAdminMenu = {
 
 		_topBar = _display ctrlCreate ['RscStructuredText', 10012];
 		_topBar ctrlSetPosition [-0.6875,-0.388,2.3875,0.06];
-		_topBar ctrlSetBackgroundColor [0,0,0,0.7]; 
+		_topBar ctrlSetBackgroundColor [0,0,0,0.7];
 		_topBar ctrlSetTextColor [1,1,1,0.7];
 		_topBar ctrlCommit 0;
 		uiNamespace setVariable ['topBar',_topBar];
@@ -1842,74 +1835,74 @@ showAdminMenu = {
 	_playerList = uiNamespace getVariable 'playerList';
 
 	lbClear _mainList;
-	
+
 	[allUnits] call fillPlayerList;
 
-	_adminMenu = [_adminMenu, ['---Spawn Weapons---','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['---Spawn Vehicles---','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['---View Loadouts---','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['---Variable Viewer---','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['---View Players---','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['---------------','spacer']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['God Mode','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Vehicle God Mode','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Auto Revive','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['ESP','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['AI ESP','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Map Markers','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Dead Markers','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Non-finite Ammo','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Rapid Fire','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['No Recoil','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['No Sway','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['No Fatigue','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Snorting Speed','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Fly mode','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Map Teleport','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['No Grass','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Vehicle Boost','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Display near Players','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Sort Player by Name','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['List AIs','toggle']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['---------------','spacer']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Copy Players Loadout','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['FreeCams(.com)','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Virtual Arsenal','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Revive Near Players','blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Give Ammo', 'blue']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['Rainbow Vehicle', 'blue']] call addToAdminList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---Spawn Weapons---','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---Spawn Vehicles---','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---View Loadouts---','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---Variable Viewer---','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---View Players---','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---------------','spacer']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['God Mode','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Vehicle God Mode','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Auto Revive','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['ESP','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['AI ESP','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Map Markers','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Dead Markers','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Unlimited Ammo','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Rapid Fire','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['No Recoil','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['No Sway','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['No Fatigue','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Speed Hack','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Fly mode','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Map Teleport','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['No Grass','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Vehicle Boost','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Display near Players','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Sort Player by Name','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['List AIs','toggle']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---------------','spacer']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Copy Players Loadout','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Free Cam','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Virtual Arsenal','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Revive Near Players','blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Give Ammo', 'blue']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['Rainbow Vehicle', 'blue']] call addToARMATEAMList;
 
 	if (isModLife) then {
-		_adminMenu = [_adminMenu, ['---Altis Lyfe---','spacer']] call addToAdminList;
+		_ARMATEAMMenu = [_ARMATEAMMenu, ['---Altis Lyfe---','spacer']] call addToARMATEAMList;
 		if (!isNil "life_fnc_atmMenu") then {
-			_adminMenu = [_adminMenu, ['ATM Menu', 'blue']] call addToAdminList;
+			_ARMATEAMMenu = [_ARMATEAMMenu, ['ATM Menu', 'blue']] call addToARMATEAMList;
 		};
 		if (!isNil "life_vehicles") then {
-			_adminMenu = [_adminMenu, ['Vehicle Key (Cursor Target)', 'blue']] call addToAdminList;
+			_ARMATEAMMenu = [_ARMATEAMMenu, ['Vehicle Key (Cursor Target)', 'blue']] call addToARMATEAMList;
 		};
 		if (!isNil "life_licenses") then {
-			_adminMenu = [_adminMenu, ['Get All Licenses', 'blue']] call addToAdminList;
+			_ARMATEAMMenu = [_ARMATEAMMenu, ['Get All Licenses', 'blue']] call addToARMATEAMList;
 		};
 	};
-	_adminMenu = [_adminMenu, ['---------------','spacer']] call addToAdminList;
-	_adminMenu = [_adminMenu, ['View Keybinds', 'blue']] call addToAdminList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['---------------','spacer']] call addToARMATEAMList;
+	_ARMATEAMMenu = [_ARMATEAMMenu, ['View Keybinds', 'blue']] call addToARMATEAMList;
 
 
-	for '_i' from 0 to (count _adminMenu)-1 do {
-		_curArry = _adminMenu select _i;
+	for '_i' from 0 to (count _ARMATEAMMenu)-1 do {
+		_curArry = _ARMATEAMMenu select _i;
 		_txt = _curArry select 0;
 		_color = _curArry select 1;
 		_action = _curArry select 2;
 
 		_mainList lbAdd _txt;
 		if (_color == 'blue') then {
-			_mainList lbSetColor [_i,[0,0.7,0.8,1]]; 
+			_mainList lbSetColor [_i,[0,0.7,0.8,1]];
 		};
 		if (_color == 'red') then {
-			_mainList lbSetColor [_i,[0.8,0.4,0.4,1]]; 
+			_mainList lbSetColor [_i,[0.8,0.4,0.4,1]];
 		};
 		if (_color == 'spacer') then {
-			_mainList lbSetColor [_i,[0.8,0.9,0.8,1]]; 
+			_mainList lbSetColor [_i,[0.8,0.9,0.8,1]];
 		};
 		if (_color == 'toggle') then {
 			if !(_txt in toggleFuncs) then {
@@ -1922,20 +1915,20 @@ showAdminMenu = {
 
 	['weapons'] call fillSpawnMenu;
 
-	
+
 
 	_mainList ctrlRemoveAllEventHandlers 'LBDblClick';
-	_mainList ctrlAddEventHandler ['LBDblClick','_func = lbText [10001,(lbCurSel 10001)]; [_func] call handleAdminFuncs;'];
+	_mainList ctrlAddEventHandler ['LBDblClick','_func = lbText [10001,(lbCurSel 10001)]; [_func] call handleARMATEAMFuncs;'];
 
 	_secondList = uiNamespace getVariable 'secondList';
 	_secondList ctrlRemoveAllEventHandlers 'LBDblClick';
-	_secondList ctrlAddEventHandler ['LBDblClick','[(lbCurSel 10003)] call handleAdminSpawn;'];
-		
+	_secondList ctrlAddEventHandler ['LBDblClick','[(lbCurSel 10003)] call handleARMATEAMSpawn;'];
+
 };
 
 trimString = {
 	params['_input', ['_len', 3]];
-	
+
 	_arr = toArray _input;
 	if (count _arr > _len) then {
 		_arr resize ((count _arr) - _len);
@@ -1947,7 +1940,7 @@ trimString = {
 };
 
 
-addToAdminList = {
+addToARMATEAMList = {
 	params['_list', '_option', ['_trim', false]];
 
 	_txt = _option select 0;
@@ -1955,12 +1948,12 @@ addToAdminList = {
 	if (_trim) then {
 		_txt = [_txt] call trimString;
 	};
-	
+
 	_list = _list + [_option];
-	
+
 
 	_ret = _list;
 	_ret
 };
 firstRun = false;
-systemChat 'ANTI-HAX: Loading completed. Press Insert to open Admin Menu!';
+systemChat 'ARMA.TEAM: Loading completed. Press Insert to open Menu!';
