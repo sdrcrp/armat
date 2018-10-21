@@ -23,7 +23,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "Arma.Team Hades Menu";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_Var_EMPTY];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_Var_EMPTY];
     };
     }];
 
@@ -39,7 +39,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Hacker Weapons";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_ONE];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_ONE];
     };
     }];
 
@@ -55,7 +55,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Launcher Crate";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_TWO];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_TWO];
     };
     }];
 
@@ -70,7 +70,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Explosives Crate";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_THREE];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_THREE];
     };
     }];
 
@@ -85,7 +85,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Misc Crate";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_FOUR];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_FOUR];
     };
     }];
 
@@ -100,7 +100,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "Life Spawn Menu";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_Var_EMPTY];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_Var_EMPTY];
     };
     }];
 
@@ -115,7 +115,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> [$$] 25,000";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_FIVE];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_FIVE];
     };
     }];
 
@@ -130,7 +130,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Weapon Crate";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_SIX];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_SIX];
     };
     }];
 
@@ -146,7 +146,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "General Menu";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_Var_EMPTY];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_Var_EMPTY];
     };
     }];
 
@@ -177,7 +177,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> No Fatigue";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_ARMATEAM_SEVEN];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_ARMATEAM_SEVEN];
     };
     }];
 
@@ -193,7 +193,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "Loadouts Menu";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_Var_EMPTY];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_Var_EMPTY];
     };
     }];
 
@@ -209,7 +209,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> New Player";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_KIT_NEWB];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_KIT_NEWB];
     };
     }];
 
@@ -225,7 +225,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Rebel";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_KIT_REBEL];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_KIT_REBEL];
     };
     }];
 
@@ -240,7 +240,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Normal Player";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_KIT_CASUAL];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_KIT_CASUAL];
     };
     }];
 
@@ -256,7 +256,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Experienced Rebel";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_KIT_EXPERIENCED];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_KIT_EXPERIENCED];
     };
     }];
 
@@ -272,7 +272,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "Pro Menu";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_Var_EMPTY];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_Var_EMPTY];
     };
     }];
 
@@ -288,7 +288,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Map Teleport";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", "[] spawn B_EX0_TELEPORT"];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", "[] spawn B_ATM_TELEPORT"];
     };
     }];
 
@@ -304,7 +304,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Player ESP";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_SPIT_BARS];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_SPIT_BARS];
     };
     }];
 
@@ -320,7 +320,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Unlimited Ammo";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_WHITE];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_WHITE];
     };
     }];
 
@@ -336,7 +336,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> No Recoil";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_BLUE];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_BLUE];
     };
     }];
 
@@ -352,7 +352,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> God mode";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_YELLOW];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_YELLOW];
     };
     }];
 
@@ -368,7 +368,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Delete Target";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_DEL];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_DEL];
     };
     }];
 
@@ -384,7 +384,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "> Money Pile Heaven";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_HEAVEN];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_HEAVEN];
     };
     }];
 
@@ -400,7 +400,7 @@
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetBackgroundColor [1,0,0,1];
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlCommit 0;
     _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlSetText "By Arma.Team";
-    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_EX0_Var_EMPTY];
+    _h42q6jetjeqtj4qjndfj57yyi46734565gj ctrlAddEventHandler ["ButtonClick", B_ATM_Var_EMPTY];
     };
     }];
 
@@ -410,7 +410,7 @@
 
 
 
-B_EX0_ARMATEAM_ONE = {
+B_ATM_ARMATEAM_ONE = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _fjppojjnbjtfcrerwcgbjoi                  = "Box_IND_AmmoVeh_F" createVehicle position _gfkjyk357k6246rastjhadj4wed;
     clearMagazineCargoGlobal _fjppojjnbjtfcrerwcgbjoi;
@@ -432,7 +432,7 @@ B_EX0_ARMATEAM_ONE = {
     _fjppojjnbjtfcrerwcgbjoi addMagazineCargoGlobal ["200Rnd_556x45_Box_F", 20];
 };
 
-B_EX0_ARMATEAM_TWO = {
+B_ATM_ARMATEAM_TWO = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _fjppojjnbjtfcrerwcgbjoi                  = "Box_IND_AmmoVeh_F" createVehicle position _gfkjyk357k6246rastjhadj4wed;
     clearMagazineCargoGlobal _fjppojjnbjtfcrerwcgbjoi;
@@ -470,7 +470,7 @@ B_EX0_ARMATEAM_TWO = {
     _fjppojjnbjtfcrerwcgbjoi addMagazineCargoGlobal ["Vorona_HE", 20];
 };
 
-B_EX0_ARMATEAM_THREE = {
+B_ATM_ARMATEAM_THREE = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _fjppojjnbjtfcrerwcgbjoi                  = "Box_IND_AmmoVeh_F" createVehicle position _gfkjyk357k6246rastjhadj4wed;
     clearMagazineCargoGlobal _fjppojjnbjtfcrerwcgbjoi;
@@ -494,7 +494,7 @@ B_EX0_ARMATEAM_THREE = {
     _fjppojjnbjtfcrerwcgbjoi addMagazineCargoGlobal ["IEDUrbanSmall_Remote_Mag", 20];
 };
 
-B_EX0_ARMATEAM_FOUR = {
+B_ATM_ARMATEAM_FOUR = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _fjppojjnbjtfcrerwcgbjoi                  = "Box_IND_AmmoVeh_F" createVehicle position _gfkjyk357k6246rastjhadj4wed;
     clearMagazineCargoGlobal _fjppojjnbjtfcrerwcgbjoi;
@@ -534,13 +534,13 @@ B_EX0_ARMATEAM_FOUR = {
     _fjppojjnbjtfcrerwcgbjoi addMagazineCargoGlobal ["ItemGPS", 20];
 };
 
-B_EX0_ARMATEAM_FIVE = {
+B_ATM_ARMATEAM_FIVE = {
     life_cash = life_cash + 25000;
     ["cash","add",25000] call life_fnc_handleCash;
     systemChat "Added.";
 };
 
-B_EX0_ARMATEAM_SIX = {
+B_ATM_ARMATEAM_SIX = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _fjppojjnbjtfcrerwcgbjoi                  = "Box_IND_AmmoVeh_F" createVehicle position _gfkjyk357k6246rastjhadj4wed;
     clearMagazineCargoGlobal _fjppojjnbjtfcrerwcgbjoi;
@@ -564,7 +564,7 @@ B_EX0_ARMATEAM_SIX = {
     _fjppojjnbjtfcrerwcgbjoi addMagazineCargoGlobal ["30Rnd_9x21_Mag", 20];
 };
 
-B_EX0_ARMATEAM_SEVEN = {
+B_ATM_ARMATEAM_SEVEN = {
     _gfkjyk357k6246rastjhadj4wed = player;
      while {true} do
     {
@@ -573,7 +573,7 @@ B_EX0_ARMATEAM_SEVEN = {
     };
 };
 
-B_EX0_KIT_NEWB = {
+B_ATM_KIT_NEWB = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _gfkjyk357k6246rastjhadj4wed addBackpack "B_Carryall_khk";
     _gfkjyk357k6246rastjhadj4wed forceAddUniform "U_C_Poloshirt_tricolour";
@@ -581,7 +581,7 @@ B_EX0_KIT_NEWB = {
     _gfkjyk357k6246rastjhadj4wed addHeadgear "H_Hat_blue";
 };
 
-B_EX0_KIT_REBEL = {
+B_ATM_KIT_REBEL = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _gfkjyk357k6246rastjhadj4wed addBackpack "B_Kitbag_sgg";
     _gfkjyk357k6246rastjhadj4wed forceAddUniform "U_IG_Guerilla2_2";
@@ -589,7 +589,7 @@ B_EX0_KIT_REBEL = {
     _gfkjyk357k6246rastjhadj4wed addHeadgear "H_Booniehat_khk_hs";
 };
 
-B_EX0_KIT_CASUAL = {
+B_ATM_KIT_CASUAL = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _gfkjyk357k6246rastjhadj4wed addBackpack "B_Kitbag_sgg";
     _gfkjyk357k6246rastjhadj4wed forceAddUniform "U_IG_Guerilla2_2";
@@ -597,14 +597,14 @@ B_EX0_KIT_CASUAL = {
     _gfkjyk357k6246rastjhadj4wed addHeadgear "H_Hat_blue";
 };
 
-B_EX0_KIT_EXPERIENCED = {
+B_ATM_KIT_EXPERIENCED = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _gfkjyk357k6246rastjhadj4wed addBackpack "B_Carryall_khk";
     _gfkjyk357k6246rastjhadj4wed forceAddUniform "U_O_Wetsuit";
     _gfkjyk357k6246rastjhadj4wed addVest "V_PlateCarrierL_CTRG";
 };
 
-B_EX0_TELEPORT = {
+B_ATM_TELEPORT = {
    hint "Zoom in all the way where you want to teleport to and press Escape.";
    openMap [true,false];
    _grgrgsrgjyxkgfs = [0,0,0];
@@ -615,7 +615,7 @@ B_EX0_TELEPORT = {
    vehicle player setpos _grgrgsrgjyxkgfs;
 };
 
-B_EX0_WHITE = {
+B_ATM_WHITE = {
   if (isNil 'ARMATEAMInfAmmoToggle') then {ARMATEAMInfAmmoToggle = false};
 
   if (!ARMATEAMInfAmmoToggle) then {
@@ -635,7 +635,7 @@ B_EX0_WHITE = {
   };
 };
 
-B_EX0_BLUE = {
+B_ATM_BLUE = {
   if (isNil 'ARMATEAMRecoilToggle') then {ARMATEAMRecoilToggle = false};
 
 	if (!ARMATEAMRecoilToggle) then {
@@ -652,7 +652,7 @@ B_EX0_BLUE = {
 		systemChat 'No recoil disabled';
 	};
 };
-B_EX0_YELLOW = {
+B_ATM_YELLOW = {
   if (isNil 'ARMATEAMGodToggle') then {ARMATEAMGodToggle = false};
 	if (!ARMATEAMGodToggle) then {
 		ARMATEAMGodToggle = true;
@@ -679,18 +679,18 @@ B_EX0_YELLOW = {
 	};
 };
 
-B_EX0_DEL = {
+B_ATM_DEL = {
     _fkjygtrcgbjpohhgug = cursorTarget;
     deleteVehicle _fkjygtrcgbjpohhgug;
 };
 
-B_EX0_HEAVEN = {
+B_ATM_HEAVEN = {
     _guiladrwr       = "Land_Money_F";
     _gfkjyk357k6246rastjhadj4wed = player;
     { _veh = _guiladrwr createVehicle position _gfkjyk357k6246rastjhadj4wed; } forEach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 };
 
-B_EX0_SPIT_BARS = {
+B_ATM_SPIT_BARS = {
   if (isnil("asdasdhdsfglasdjhfuolh31f4674")) then {
   							asdasdhdsfglasdjhfuolh31f4674 = 0;
   						};
@@ -707,11 +707,11 @@ B_EX0_SPIT_BARS = {
 
 
 comment "Empty Variable";
-B_EX0_Var_EMPTY = {
+B_ATM_Var_EMPTY = {
 
 };
 comment "Blue uniform script";
-B_EX0_Var_CLR_BLUE = {
+B_ATM_Var_CLR_BLUE = {
     _gfkjyk357k6246rastjhadj4wed = player;
     _gfkjyk357k6246rastjhadj4wed setObjectTexture [0, "#(rgb,8,8,3)color(0,1,1,1)"];
     (backpackContainer _gfkjyk357k6246rastjhadj4wed) setObjectTexture [0,'#(argb,8,8,3)color(0,1,1,1)'];
