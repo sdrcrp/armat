@@ -50,7 +50,7 @@ _display = findDisplay 46 createDisplay "RscDisplayEmpty";
   findDisplay 0 displayCtrl 999 setVariable ['_TARGETINFOXDAWD', WFcCNfJdqTvDsPzGchaDSJECukbkjWPvSGpM];
 
       gVYCpHmrysdBGkMUZUEvCKSgTTgjLdADtzTD = [
-            ["Arma.Team Combat Menu","DRed"],
+            ["Arma.Team Venus Menu","DRed"],
             ["ARMA.TEAM","LRed"],
             ["","DRed"],
             ["Do not leak.","LRed"],

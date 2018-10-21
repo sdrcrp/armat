@@ -21,7 +21,6 @@
 	        POOP_Item = POOP_Item + [["Player Mrkrs", "POOP_Players", "", false, false, true, "POOP_Player_Toggle"]];
 	        POOP_Item = POOP_Item + [["Vehicle Mrkrs", "POOP_Vehicles", "", false, false, true, "POOP_Vehicle_Toggle"]];
 	        POOP_Item = POOP_Item + [["Inf Ammo", "POOP_Unlim", "", false, false, true, "POOP_Unlim_Toggle"]];
-	        POOP_Item = POOP_Item + [["Bruce Almighty", "POOP_Bruce", "", false, false, true, "POOP_Bruce_Toggle"]];
 	        POOP_Item = POOP_Item + [["Chitty Bang Bang", "POOP_Vehbruce", "", false, false, true, "POOP_vehbruce_Toggle"]];
 	        POOP_Item = POOP_Item + [["Remove Terrain", "POOP_Terrain", "", false, false, true, "POOP_Terrain_Toggle"]];
 	        POOP_Item = POOP_Item + [["View Distance", "POOP_Viewdis", "", false, false, true, "POOP_Distance_Toggle"]];
