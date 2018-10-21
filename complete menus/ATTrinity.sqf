@@ -10,7 +10,7 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlsetposition [-0.71,-0.44,safezonew,safezoneh/20];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlsetbackgroundcolor [1,0,0,0];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlsettextcolor [1,1,1,1];
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetStructuredText parseText "<t size='0.5'> </t><br/><t size='0.5' align='left'>: Trinity v1.4 :</t>";
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetStructuredText parseText "<t size='0.5'> </t><br/><t size='0.5' align='left'>.</t>"; // shits broken af need to fix
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
 
 
@@ -25,7 +25,7 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetFont "EtelkaMonospacePro";
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetBackgroundColor [1,0,0,1];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText ": Trinity v1.4 :";
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText ": Arma.Team Trinity Menu :";
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_CREDITS];
     };
     }];
@@ -43,7 +43,7 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetBackgroundColor [1,0,0,1];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "Godmode";
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_GOD];
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_GOD]; // God Mode
     };
     }];
 
@@ -58,7 +58,7 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetBackgroundColor [1,0,0,1];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "Heal Me";
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_HEAL];
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_HEAL];  // full heal
     };
     }];
 
@@ -72,8 +72,8 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetFont "PuristaLight";
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetBackgroundColor [1,0,0,1];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "All Shops Menu";
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_SHOPS];
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "ESP";
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_SHOPS]; // Acctualy ESP
     };
     }];
 
@@ -87,8 +87,8 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetFont "PuristaLight";
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetBackgroundColor [1,0,0,1];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "Vehicle Menu";
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_VEHICLE];
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "No Recoil";
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_VEHICLE]; // no recoil
     };
     }];
 
@@ -102,8 +102,8 @@
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetFont "PuristaLight";
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetBackgroundColor [1,0,0,1];
     _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlCommit 0;
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "Kick All Cops";
-    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_EMPTY];
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlSetText "Unlimited Ammo";
+    _xxpoaawpjhfutyftfglyhytgwdwdgghhvx ctrlAddEventHandler ["ButtonClick", C_EX0_Unlim_ammo]; // unlim ammo
     };
     }];
 
@@ -423,12 +423,23 @@
     }];
 
 C_EX0_CREDITS = {
-    systemChat "Coded by 3D Printer";
+    systemChat "ya mum";
 };
 
-C_EX0_EMPTY = {
-
-};
+  C_EX0_Unlim_ammo = {
+    if (isnil("ArmaTeamAmmoToggle")) then {
+      ArmaTeamAmmoToggle = 0;
+    };
+    if (ArmaTeamAmmoToggle == 0) then {
+      ArmaTeamAmmoToggle = 1;
+      systemChat "Unlimited Ammo ON";
+      player addeventhandler ["fired", {(_this select 0) setvehicleammo 1}]
+    } else {
+      ArmaTeamAmmoToggle = 0;
+      systemChat "Unlimited Ammo OFF";
+      player removeAllEventHandlers "fired";
+    };
+  };
 
 C_EX0_Clipboard = {
     [{
@@ -714,9 +725,21 @@ C_EX0_END = {
 comment "left side";
 
 C_EX0_GOD = {
-    removeAllActions player;
-    player addAction ["<t color=""#ffff99"">Enable God</t>", {player allowDamage false; hint "On";}];
-    player addAction ["<t color=""#ffff99"">Disable God</t>", {player allowDamage true; hint "Off";}];
+  if (isnil("efsopandorasboxingglovesGodToggle")) then {
+    efsopandorasboxingglovesGodToggle = 0;
+  };
+  if (efsopandorasboxingglovesGodToggle == 0) then {
+    efsopandorasboxingglovesGodToggle = 1;
+    systemChat "Gód Módé ON";
+  } else {
+    efsopandorasboxingglovesGodToggle = 0;
+    systemChat "Gód Módé OFF";
+    _efsopandorasboxingglovesGodRemovePlayer = player; _efsopandorasboxingglovesAmmoRemovePlayer allowDamage true;
+  };
+  while {efsopandorasboxingglovesGodToggle == 1} do {
+    _efsopandorasboxingglovesGodPlayer = player;
+    _efsopandorasboxingglovesGodPlayer allowDamage false;
+  };
 };
 
 C_EX0_HEAL = {
@@ -724,29 +747,39 @@ C_EX0_HEAL = {
 };
 
 C_EX0_SHOPS = {
-    removeAllActions player;
-    player addAction["<t color='#ffff99'>General Store</t>", life_fnc_weaponShopMenu, "genstore"];
-    player addAction["<t color='#ffff99'>Clothing Store</t>", life_fnc_clothingMenu, "bruce"];
-    player addAction["<t color='#ffff99'>Rebel Market</t>", life_fnc_virt_menu, "rebel"];
-    player addAction["<t color='#ffff99'>Normal Market</t>", life_fnc_virt_menu, "market"];
-    player addAction ["<t color='#ffff99'>Rebel Clothing Shop</t>",life_fnc_clothingMenu, 'reb'];
-    player addAction["<t color='#ffff99'>Rebel Weapons</t>", life_fnc_weaponShopMenu, "rebel"];
-    player addAction["<t color='#ffff99'>Rebel Rilfe's</t>", life_fnc_weaponShopMenu, "rebel_high"];
-    player addAction["<t color='#ffff99'>Joel's Weapons</t>", life_fnc_weaponShopMenu, "joel"];
+  if (isnil("ArmaTeamGodToggle")) then {
+    ArmaTeamGodToggle = 0;
+  };
+  if (ArmaTeamGodToggle == 0) then {
+    ArmaTeamGodToggle = 1;
+    systemChat "Player ESP ON";
+    addMissionEventHandler['Draw3D',{{if((player distance _x)<700)then{drawIcon3D['',[0,1,0,1],[(ASLtoATL eyePos _x)select 0,(ASLtoATL eyePos _x)select 1,((ASLtoATL eyePos _x)select 2)+0.3],0.1,0.1,45,format['%1(%2m) - %3HP',name _x,round(player distance _x),round((((damage _x)-1)*-100))],1,0.03,'PuristaSemiBold']}}forEach allPlayers}];
+  } else {
+    ArmaTeamGodToggle = 0;
+    systemChat "Player ESP OFF";
+    removeAllMissionEventHandlers'Draw3D';
+  };
 };
 
 C_EX0_VEHICLE = {
-    [{
-        removeAllActions player;
-        player addAction ["Quad",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "B_Quadbike_01_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["OffRoad",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "C_Offroad_01_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["SUV",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "C_SUV_01_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["Hatchback Sport",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "C_Hatchback_01_sport_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["OffRoadArmed",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "B_G_Offroad_01_armed_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["Hummingbird",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "B_Heli_Light_01_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["Orca",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "O_Heli_Light_02_unarmed_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-        player addAction ["GhostHawk",{_pos = player modelToWorld[0, 8, 0.2];gremorysama = "B_Heli_Transport_01_F"createVehicle _pos;isseigremory = gremorysama;publicvariable "Loljesaispasquoiecriremdr";}];
-    }] spawn RE;
+  if (isnil("ArmaTeamRecoilToggle")) then {
+    ArmaTeamRecoilToggle = 0;
+  };
+  if (ArmaTeamRecoilToggle == 0) then {
+    ArmaTeamRecoilToggle = 1;
+    systemChat "No Recoil ON";
+  } else {
+    ArmaTeamRecoilToggle = 0;
+    systemChat "No Recoil OFF";
+    _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilRemovePlayer = player;
+    _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilRemovePlayer setUnitRecoilCoefficient 1;
+    _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilRemovePlayer setCustomAimCoef 1;
+  };
+  while {ArmaTeamRecoilToggle == 1} do {
+    _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilPlayer = player;
+    _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilPlayer setUnitRecoilCoefficient 0;
+    _samisafatturdheaddgfdfgdfgdkappaunodostes23523sdfdsfgadfgRecoilPlayer setCustomAimCoef 0.001;
+  };
 };
 
 C_EX0_COPS = {
