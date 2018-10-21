@@ -29,7 +29,7 @@ ddddddkkkkkkk =
 
 	if (not (_key == 210 && !_shift && !_ctrl && !_alt)) exitWith {false};
 	closeDialog 0;
-	[] spawn playeruidcheckforleak;
+		[] spawn fjidnfdsnfd;
 	true
 };
 
@@ -63,18 +63,6 @@ healselfhotkey =
 	waitUntil {sleep 0.5; !isNull (findDisplay 46)};
 	(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call healselfhotkey"];
 };
-
-
-playeruidcheckforleak = {
-	_uid = getPlayerUID player;
-	if(_uid == "76561198107306119") then
-	{
-		[] spawn fjidnfdsnfd;
-	}else {SystemChat "Contact Arma.Team Admins for UID Change";};
-};
-
-
-
 
 fjidnfdsnfd = {
 	_k = createDialog "hackmenu";

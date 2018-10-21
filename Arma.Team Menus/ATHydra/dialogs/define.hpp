@@ -281,7 +281,7 @@ class AT_RscButton88
 	access = 0;
 	type = 1;
 	text = "";
-	colorText[] =	{0.541,0.043,0,1};
+	colorText[] =	{0.945,0.937,1,1};
 	colorActive[] = {1,1,1,1};
 	colorDisabled[] ={	0,	0,	0,	1};
 	colorBackground[] ={	0,	0,	0,	0};
@@ -633,7 +633,7 @@ class Life_RscStructuredText {
 	w = 0.1;
 	text = "";
 	size = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	colorText[] = {0.541,0.043,0,1};
+	colorText[] = {0.945,0.937,1,1};
 	shadow = 1;
 
 	class Attributes {

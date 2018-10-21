@@ -40,8 +40,8 @@ class hackmenu {
            y = 0.11302 * safezoneH + safezoneY;
            w = 0.524479 * safezoneW;
            h = 0.0340798 * safezoneH;
-           colortext[] = {"0.541,0.043,0,1"};
-           colorbackground[] = {0.541,0.043,0,1};
+           colortext[] = {"0.02,0.518,1,1"};
+           colorbackground[] = {0.945,0.937,1,1};
        };
        class RscButtonMenu0 : AT_RscButton88
        {
@@ -62,7 +62,7 @@ class hackmenu {
            y = 0.214 * safezoneH + safezoneY;
            w = 0.00833333 * safezoneW;
            h = 0.653492 * safezoneH;
-           colorbackground[] = {0.541,0.043,0,1};
+           colorbackground[] = {0.945,0.937,1,1};
        };
        class VestList : AT_RscButton88
        {
@@ -89,7 +89,7 @@ class hackmenu {
            y = 0.25008 * safezoneH + safezoneY;
            w = 0.120359833333333 * safezoneW;
            h = 0.60483723466407 * safezoneH;
-           colortext[] = {0.541,0.043,0,1};
+           colortext[] = {0.02,0.518,1,1};
        };
        class Spawner : AT_RscButton88
        {
@@ -120,12 +120,12 @@ class hackmenu {
        class Title : Life_RscStructuredText
        {
            idc = 10435400;
-           text = "Arma.Team";
+           text = "Arma.Team Hydra Menu";
            x = 0.248994 * safezoneW + safezoneX;
            y = 0.15394 * safezoneH + safezoneY;
            w = 0.136979 * safezoneW;
            h = 0.0392161 * safezoneH;
-           colortext[] = {0.541,0.043,0,1};
+           colortext[] = {0.02,0.518,1,1};
        };
        class Vlist : AT_RscButton88
        {
@@ -351,7 +351,7 @@ class hackmenu {
            y = 0.15394 * safezoneH + safezoneY;
            w = 0.136979 * safezoneW;
            h = 0.0392161 * safezoneH;
-           colortext[] = {0.541,0.043,0,1};
+           colortext[] = {0.02,0.518,1,1};
        };
        class Title00 : Life_RscStructuredText
        {
@@ -360,7 +360,7 @@ class hackmenu {
            y = 0.15394 * safezoneH + safezoneY;
            w = 0.223697833333333 * safezoneW;
            h = 0.0392161 * safezoneH;
-           colortext[] = {0.541,0.043,0,1};
+           colortext[] = {0.02,0.518,1,1};
        };
        class PlayerListbox : RscListBox
        {

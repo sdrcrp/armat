@@ -8,7 +8,7 @@ class CfgPatches
 		requiredAddons[] = {};
 		requiredVersion = 0.1;
 		author[] = {"Arma.Team"};
-		authorUrl = "https://arma.team";
+		authorUrl = "";
 	};
 };
 
@@ -26,7 +26,7 @@ class CfgFunctions
             class Init
             {
                 postInit=1;
-                file = "\remasterV3\fdg7gfdg62V3.sqf";
+                file = "\ATHydra\fdg7gfdg62V3.sqf";
             };
         };
     };
